@@ -1,0 +1,75 @@
+html, body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  background-color: #E0E0E0;
+}
+
+img.project{ 
+  -webkit-filter: drop-shadow(2px 2px 2px #757575);
+  filter:         drop-shadow(2px 2px 2px #757575);
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  margin: 100px;
+}
+
+img.project:hover {
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+img.thumbnail {
+  height: 150px;
+  padding: 50px 50px 0 0;
+  cursor: pointer;
+  cursor: hand;
+}
+
+img.modal {
+  height: 100%;
+  width: auto;
+  margin: 0 0 -5px 0;
+  padding: 0;
+}
+
+div.container {
+  margin: 60px 100px;
+}
+
+div.gallery {
+  width: 100%;
+  margin: 0 -50px 0 0;
+}
+
+div#header {
+  border-bottom: 1px dashed black;
+}
+
+div#header > a > paper-icon-button#initials {
+  padding: 0;
+}
+
+div#header > a > paper-icon-button#initials > iron-icon {
+  height: 50px;
+  width: 50px;
+  margin-left: -6px;
+}
+
+div#description {
+  width: 60%;
+  display: block;
+}
+
+div#description > p {
+  top: 40px;
+  font-size: 14px;
+  font-weight: 200;
+  color: #616161;
+  margin: 4px 0;
+}
+
+div#header > h2 {
+  padding: 10px 54px;
+  margin: 0;
+  color: #424242;
+}
