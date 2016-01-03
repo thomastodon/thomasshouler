@@ -4,6 +4,7 @@
 from flask import Flask, render_template
 import csv
 import os
+import pdb
 from collections import OrderedDict
 
 app = Flask(__name__)
@@ -12,14 +13,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	reader = csv.DictReader(open('static/projects.csv'))
-	projects = {}
-	for row in reader:
-	    key = row.pop('id')
-	    if key in projects:
-	        # implement your duplicate row handling here
-	        pass
-	    projects[key] = row
+	projects = get_project()
 	return render_template('index.html', projects=projects)
 
 @app.route('/<project_id>')
@@ -29,8 +23,9 @@ def project(project_id):
 		assets[os.path.splitext(fp)[0]] = {"path": fp}
 
 	assets = order_dict(assets, asc=True)
+	project = get_project(project_id)
 
-	return render_template('project.html', project_id=project_id, assets=assets)
+	return render_template('project.html', project=project, assets=assets)
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -57,3 +52,20 @@ def order_dict(d, asc=False):
     items.reverse()
     od = OrderedDict(items)
     return od
+
+def get_project(id=None):
+	reader = csv.DictReader(open('static/projects.csv'))
+	projects = {}
+
+	for row in reader:
+		if id == row['id']: return row
+		key = row.pop('id')
+		if key in projects: pass
+		projects[key] = row
+
+	return projects
+
+
+
+
+

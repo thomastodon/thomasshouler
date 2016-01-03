@@ -27,16 +27,15 @@
 
 		{% for asset_id, asset in assets.items() %}
 		<paper-dialog id="{{asset_id}}" entry-animation="slide-from-bottom-animation" exit-animation="slide-to-bottom-animation" with-backdrop>
-			<img class="modal" id="{{asset_id}}" src="static/assets/{{project_id}}/{{asset.path}}">
+			<img class="modal" id="{{asset_id}}" src="static/assets/{{project.id}}/{{asset.path}}">
 		</paper-dialog>
 		{% endfor %}
 
 	<div class=container>
 
 		<div id="header">
-			<h2>{{project_id}}</h2>
-			<!-- <img id="id_written" class=written src="static/assets/{{project_id}}/id_written.png"> -->
-			<img class=written src="static/assets/2015.png"><img class=written src="static/assets/jun.png">
+			<div id="title">{{project.id}}</div>
+			<div id="date">{{project.month}}&nbsp;{{project.year}}</div>
 		</div>
 		<img class=line src="static/assets/border.png">
 		
@@ -47,7 +46,7 @@
 
 		<div class=gallery>
 		{% for asset_id, asset in assets.items() %}
-			<a><img class="thumbnail" id="{{asset_id}}" src="static/assets/{{project_id}}/{{asset.path}}"></a>
+			<a><img class="thumbnail" id="{{asset_id}}" src="static/assets/{{project.id}}/{{asset.path}}"></a>
 		{% endfor %}
 		</div>
 	</div>
