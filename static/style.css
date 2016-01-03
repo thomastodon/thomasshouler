@@ -32,17 +32,24 @@ img.modal {
   padding: 0;
 }
 
-img.written {
-  height: 16px;
-  float: left;
+div#title {
+  font-size: 24px;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  font-weight: 700;
+  color: #424242;
+  width: 50%;
 }
 
-img.written#id_written {
-  float: left;
+div#date {
+  font-size: 14px;
+  color: #616161;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
 }
 
-img.written#date {
-}
 
 div.container {
   margin: 60px 100px;
@@ -81,8 +88,6 @@ div#description > p {
   margin: 4px 0;
 }
 
-div#header > h2 {
-  padding: 10px 54px;
-  margin: 0;
-  color: #424242;
+div#header {
+  position: relative;
 }
