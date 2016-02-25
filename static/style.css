@@ -18,10 +18,6 @@ img.project:hover {
   transform: rotate(30deg);
 }
 
-img.thumbnail {
-  width: 100%;
-}
-
 div#title {
   font-size: 24px;
   position: absolute;
@@ -56,27 +52,40 @@ div.grid {
   overflow-y: scroll;
 }
 
-.grid-item,
+.thumbnail,
 .grid-sizer {
   width: 22%;
 }
 
-.grid-item {
+.thumbnail {
   float: left;
-}
-
-.grid-item:hover {
-  border-color: white;
-  cursor: pointer;
-}
-
-.grid-item--gigante {
-  height: 360px;
-  z-index: 2; /* above other items */
 }
 
 .gutter-sizer { width: 4%; }
 
+
+
+.thumbnail {
+  display: block;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  position: relative;
+  transition: opacity .4s;
+  z-index: 1;
+}
+
+.thumbnail:hover {
+  will-change: left, top, width, height;
+}
+
+.thumbnail:hover:not(.active) {
+  opacity: .8;
+}
+
+.thumbnail.active {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
 
 img.singleline {
   width: 100%;
@@ -110,7 +119,7 @@ div#footer {
 div#description {
   width: 60%;
   display: block;
-  padding: 0 0 10px 0;
+  padding: 6px 0 10px 0;
 }
 
 div#description > p {
