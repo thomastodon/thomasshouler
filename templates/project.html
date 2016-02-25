@@ -11,9 +11,12 @@
   <link rel="import" href="{{ url_for('static', filename='bower_components/elements.build.html') }}">
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
   <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/initials_spoon.png') }}"/>
-  <script src="{{ url_for('static', filename='js/masonry.pkgd.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='node_modules/isotope-layout/js/isotope.js') }}"></script>
 
+  <script src="{{ url_for('static', filename='js/jquery-2.2.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/isotope.pkgd.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/masonry.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/packery-mode.pkgd.js') }}"></script
+  <script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js') }}"></script>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -26,12 +29,6 @@
 </head>
 
 <body>
-
-		{% for asset_id, asset in assets.items() %}
-		<paper-dialog id="{{asset_id}}" entry-animation="slide-from-bottom-animation" exit-animation="slide-to-bottom-animation" with-backdrop>
-			<img class="modal" id="{{asset_id}}" src="static/assets/{{project.id}}/{{asset.path}}">
-		</paper-dialog>
-		{% endfor %}
 
 	<div class=container>
 
@@ -46,28 +43,25 @@
 		</div>
 		<img class=singleline src="static/assets/single_line.png">
 
-		<div class="grid" data-masonry-options='{ "columnWidth": 200, "itemSelector": ".grid-item" }'>
+		<div class="grid">
+  		<div class="gutter-sizer"></div>
 		{% for asset_id, asset in assets.items() %}
 			<div class="grid-item"><a><img class="thumbnail" id="{{asset_id}}" src="static/assets/{{project.id}}/{{asset.path}}"></a></div>
 		{% endfor %}
 		</div>
+		<img class=singleline src="static/assets/single_line.png">
 
-		<!-- <a href="{{ url_for('index') }}"><paper-icon-button id="initials" src="static/assets/initials_spoon.png"></paper-icon-button></a> -->
+		<div id="footer">
+		<a href="{{ url_for('index') }}"><paper-icon-button id="initials" src="static/assets/initials_spoon.png"></paper-icon-button></a>
+		</div>
+		
 	</div>
 
 	<script>
 
-		document.addEventListener('WebComponentsReady', function() {
-	  	// thumbnail press
-			$("img.thumbnail").each(function() {
-				$(this).click(function() {
-					id = this.id
-					$("paper-dialog#" + id)[0].open();
-				});
-			});
-	  });
+	$(window).load(function(){
 
-	  $('.grid').isotope({
+	  $('div.grid').isotope({
 		  layoutMode: 'packery',
 		  itemSelector: '.grid-item',
 		  percentPosition: true,
@@ -75,10 +69,12 @@
 		    gutter: '.gutter-sizer'
 		  }
 		});
+		$('div.grid').isotope('layout');
+
+	});
 
 
 	</script>
-	<script type=text/javascript src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 
 </body>
 </html>
