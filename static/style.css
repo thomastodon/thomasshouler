@@ -19,18 +19,17 @@ img.project:hover {
 }
 
 img.thumbnail {
-  height: 150px;
-  padding: 50px 50px 0 0;
-  cursor: pointer;
-  cursor: hand;
+  width: 100%;
+  /*cursor: pointer;*/
+  /*cursor: hand;*/
 }
 
-img.modal {
+/*img.modal {
   height: 100%;
   width: auto;
   margin: 0 0 -5px 0;
   padding: 0;
-}
+}*/
 
 div#title {
   font-size: 24px;
@@ -50,21 +49,27 @@ div#date {
   right: 0;
 }
 
-
 div.container {
   margin: 60px 100px;
+  max-width: 700px;
 }
 
-div.gallery {
+div.grid {
   width: 100%;
   margin: 0 -50px 0 0;
+}
+
+.grid-item {
+  width: 120px;
+  height: 120px;
+  margin: 20px 0 0 0;
+  float: left;
 }
 
 img.singleline {
   width: 100%;
   height: 1px;
 }
-
 
 img.doubleline {
   width: 100%;
