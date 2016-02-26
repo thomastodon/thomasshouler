@@ -849,6 +849,7 @@ if ($) {
       }); // done return
     }
   });
+
 })(jQuery);
 ;(function ($) {
 
@@ -943,7 +944,7 @@ if ($) {
           });
           // Animate Overlay
           $('body').append(overlay);
-          overlay.velocity({opacity: 1}, {duration: inDuration, queue: false, easing: 'easeOutQuad'}
+          overlay.velocity({opacity: 0.7}, {duration: inDuration, queue: false, easing: 'easeOutQuad'}
             );
 
 
