@@ -882,7 +882,7 @@ if ($) {
         var originalWidth = origin.width();
         var originalHeight = origin.height();
 
-        this.parentElement.parentElement.style.overflowY = 'visible'
+        // this.parentElement.parentElement.style.overflowY = 'visible'
 
         // If already modal, return to original
         if (doneAnimating === false) {
@@ -894,13 +894,10 @@ if ($) {
           return false;
         }
 
-
         // Set states
         doneAnimating = false;
         origin.addClass('active');
         overlayActive = true;
-
-        console.log(this.style.top)
 
         // Set positioning for placeholder
         placeholder.css({
@@ -911,11 +908,10 @@ if ($) {
           left: this.style.left
         });
 
-        console.log(this)
-
         // // Find ancestor with overflow: hidden; and remove it
         // ancestorsChanged = undefined;
         // ancestor = placeholder[0].parentNode;
+        // console.log(ancestor)
         // var count = 0;
         // while (ancestor !== null && !$(ancestor).is(document)) {
         //   var curr = $(ancestor);
@@ -960,6 +956,7 @@ if ($) {
           $photo_caption.velocity({opacity: 1}, {duration: inDuration, queue: false, easing: 'easeOutQuad'});
         }
 
+        windowWidth = $(this)[0].parentElement.parentElement.clientWidth
 
 
         // Resize Image
@@ -969,63 +966,36 @@ if ($) {
         var newWidth = 0;
         var newHeight = 0;
 
-        if (widthPercent > heightPercent) {
-          ratio = originalHeight / originalWidth;
-          newWidth = windowWidth * 0.9;
-          newHeight = windowWidth * 0.9 * ratio;
-        }
-        else {
-          ratio = originalWidth / originalHeight;
-          newWidth = (windowHeight * 0.9) * ratio;
-          newHeight = windowHeight * 0.9;
-        }
+        ratio = originalHeight / originalWidth;
+        newWidth = windowWidth * 0.9;
+        newHeight = windowWidth * 0.9 * ratio;
 
         // Animate image + set z-index
-        if(origin.hasClass('responsive-img')) {
-          origin.velocity({'max-width': newWidth, 'width': originalWidth}, {duration: 0, queue: false,
-            complete: function(){
-              origin.css({left: 0, top: 0})
-              .velocity(
-                {
-                  height: newHeight,
-                  width: newWidth,
-                  left: $(document).scrollLeft() + windowWidth/2 - origin.parent('.material-placeholder').offset().left - newWidth/2,
-                  top: $(document).scrollTop() + windowHeight/2 - origin.parent('.material-placeholder').offset().top - newHeight/ 2
-                },
-                {
-                  duration: inDuration,
-                  queue: false,
-                  easing: 'easeOutQuad',
-                  complete: function(){doneAnimating = true;}
-                }
-              );
-            } // End Complete
-          }); // End Velocity
-        }
-        else {
-          origin.css('left', 0)
-          .css('top', 0)
-          .velocity(
-            {
-              height: newHeight,
-              width: newWidth,
-              left: $(document).scrollLeft() + windowWidth/2 - origin.parent('.material-placeholder').offset().left - newWidth/2,
-              top: $(document).scrollTop() + windowHeight/2 - origin.parent('.material-placeholder').offset().top - newHeight/ 2
-            },
-            {
-              duration: inDuration,
-              queue: false,
-              easing: 'easeOutQuad',
-              complete: function(){doneAnimating = true;}
-            }
-            ); // End Velocity
-        }
+        console.log(parseInt($('.container').css('marginLeft'),10))
+
+        origin.css('left', 0)
+        .css('top', 0)
+        .velocity(
+          {
+					  position: 'absolute',
+            height: newHeight,
+            width: newWidth,
+            left: (windowWidth-newWidth)/2 - origin.parent('.material-placeholder').offset().left + parseInt($('.container').css('marginLeft'),10),
+            top: $(document).scrollTop() + windowHeight/2 - origin.parent('.material-placeholder').offset().top - newHeight/3
+          },
+          {
+            duration: inDuration,
+            queue: false,
+            easing: 'easeOutQuad',
+            complete: function(){doneAnimating = true;}
+          }
+      	); // End Velocity
 
     }); // End origin on click
 
 
       // Return on scroll
-      $(window).scroll(function() {
+      $('.grid').scroll(function() {
         if (overlayActive ) {
           returnToOriginal();
         }
@@ -1045,7 +1015,7 @@ if ($) {
       // This function returns the modaled image to the original spot
       function returnToOriginal() {
 
-          // origin.parentElement.parentElement.style.overflowY = 'scroll'
+          $('div.grid')[0].style.overflowY = 'scroll'
 
           doneAnimating = false;
 
@@ -1054,6 +1024,7 @@ if ($) {
           var windowHeight = window.innerHeight;
           var originalWidth = origin.data('width');
           var originalHeight = origin.data('height');
+
 
           origin.velocity("stop", true);
           $('#materialbox-overlay').velocity("stop", true);
@@ -1089,22 +1060,23 @@ if ($) {
             duration: outDuration, // Delay prevents animation overlapping
             queue: false, easing: 'easeOutQuad',
             complete: function(){
+
+              origin.css({
+                height: '',
+                top: $('img.active')[0].parentElement.style.top,
+                left: $('img.active')[0].parentElement.style.left,
+                width: '',
+                // 'max-width': '',
+                // position: '',
+                'z-index': ''
+              });
+
               placeholder.css({
                 height: '',
                 width: '',
                 position: '',
                 top: '',
                 left: ''
-              });
-
-              origin.css({
-                height: '',
-                // top: '',
-                // left: '',
-                width: '',
-                // 'max-width': '',
-                // position: '',
-                'z-index': ''
               });
 
               // Remove class
@@ -1118,7 +1090,7 @@ if ($) {
           });
 
         }
-        });
+    });
 };
 
 $(document).ready(function(){
