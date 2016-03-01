@@ -1,7 +1,7 @@
 """`main` is the top level module for your Flask application."""
 
 # Import the Flask Framework
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 import csv
 import os
 import pdb
@@ -27,6 +27,9 @@ def project(project_id):
 	links = get_links(project_id)
 
 	return render_template('project.html', project=project, assets=assets, links=links)
+
+@app.route('/cv.pdf')
+def cv(): return send_from_directory('static/assets/','cv.pdf', as_attachment=True)
 
 @app.errorhandler(404)
 def page_not_found(e):
