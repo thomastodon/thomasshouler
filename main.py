@@ -24,8 +24,9 @@ def project(project_id):
 
 	assets = order_dict(assets, asc=True)
 	project = get_project(project_id)
+	links = get_links(project_id)
 
-	return render_template('project.html', project=project, assets=assets)
+	return render_template('project.html', project=project, assets=assets, links=links)
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -54,7 +55,7 @@ def order_dict(d, asc=False):
     return od
 
 def get_project(id=None):
-	reader = csv.DictReader(open('static/projects.csv'))
+	reader = csv.DictReader(open('static/project.csv'), delimiter=',', escapechar='\\')
 	projects = {}
 
 	for row in reader:
@@ -65,6 +66,18 @@ def get_project(id=None):
 
 	return projects
 
+def get_links(project_id=None):
+	reader = csv.DictReader(open('static/link.csv'), delimiter=',', escapechar='\\')
+	links = {}
+
+	for row in reader:
+		if project_id == row['project_id']:
+			row.pop('project_id')
+			key = row.pop('id')
+			if key in links: pass
+			links[key] = row
+
+	return links
 
 
 

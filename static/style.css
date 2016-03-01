@@ -147,3 +147,12 @@ div#description > p {
   color: #616161;
   margin: 4px 0;
 }
+
+a {
+  top: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #424242;
+  margin: 4px 0;
+  text-decoration: none;
+}
