@@ -1,2 +1,3 @@
-id,top,left,month,year
-richard,100px,100px,jun,2015
+id,top,left,month,year,width
+richard,100px,100px,jun,2015,200px
+armadillo creche,400px,400px,jan,2011,240px

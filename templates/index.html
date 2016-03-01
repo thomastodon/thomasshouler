@@ -27,7 +27,7 @@
 
 	{% for project_id, project in projects.items() %}
 	<div style="position:absolute; left:{{project.left}}; top:{{project.top}};">
-		<a href="{{ url_for('project', project_id=project_id) }}"><img class="project" src="static/assets/{{project_id}}/id.png"></a>
+		<a href="{{ url_for('project', project_id=project_id) }}"><img class="project" src="static/assets/{{project_id}}/id.png" style="width:{{project.width}};"></a>
 	</div>
 	{% endfor %}
 

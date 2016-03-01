@@ -47,9 +47,16 @@ div.container {
 div.grid {
   width: 100%;
   margin: 2px -50px 2px 0;
-  padding: 8px 0;
+  padding: 16px 0;
   flex: 2;
   overflow-y: scroll;
+}
+
+div.stop-gap {
+  height: 16px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
 }
 
 .thumbnail,

@@ -13,7 +13,7 @@
   <!-- <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='materialize.css') }}"/> -->
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
 
-  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/initials_spoon.png') }}"/>
+  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/initials.png') }}"/>
 
   <script src="{{ url_for('static', filename='js/jquery-2.2.1.min.js') }}"></script>
   <script src="{{ url_for('static', filename='js/isotope.pkgd.js') }}"></script>
@@ -40,7 +40,7 @@
 			<div id="title">{{project.id}}</div>
 			<div id="date">{{project.month}}&nbsp;{{project.year}}</div>
 		</div>
-		<img class=doubleline src="static/assets/border.png">
+		<img class=doubleline src="static/assets/double_line.png">
 		
 		<div id="description">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -52,11 +52,12 @@
 		{% for asset_id, asset in assets.items() %}
 			<img class="thumbnail" id="{{asset_id}}" src="static/assets/{{project.id}}/{{asset.path}}">
 		{% endfor %}
+  		<div class="stop-gap"></div>
 		</div>
 		<img class=singleline src="static/assets/single_line.png">
 
 		<div id="footer">
-		<a href="{{ url_for('index') }}"><paper-icon-button id="initials" src="static/assets/initials_spoon.png"></paper-icon-button></a>
+		<a href="{{ url_for('index') }}"><paper-icon-button id="initials" src="static/assets/initials.png"></paper-icon-button></a>
 		</div>
 
 	</div>

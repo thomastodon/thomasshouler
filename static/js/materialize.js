@@ -958,7 +958,7 @@ if ($) {
         }
 
         windowWidth = $(this)[0].parentElement.parentElement.clientWidth
-
+        windowHeight = $(this)[0].parentElement.parentElement.clientHeight
 
         // Resize Image
         var ratio = 0;
@@ -967,13 +967,17 @@ if ($) {
         var newWidth = 0;
         var newHeight = 0;
 
-        ratio = originalHeight / originalWidth;
-        newWidth = windowWidth * 0.9;
-        newHeight = windowWidth * 0.9 * ratio;
+        if (originalHeight / windowHeight > originalWidth / windowWidth) {
+	        ratio = originalWidth / originalHeight;
+	        newWidth = windowHeight * 0.9 * ratio;
+	        newHeight = windowHeight * 0.9;
+      	} else {
+	        ratio = originalHeight / originalWidth;
+	        newWidth = windowWidth * 0.9;
+	        newHeight = windowWidth * 0.9 * ratio;
+      	}
 
         // Animate image + set z-index
-        console.log(parseInt($('.container').css('marginLeft'),10))
-
         origin.css('left', 0)
         .css('top', 0)
         .velocity(
@@ -981,8 +985,8 @@ if ($) {
 					  position: 'absolute',
             height: newHeight,
             width: newWidth,
-            left: (windowWidth-newWidth)/2 - origin.parent('.material-placeholder').offset().left + parseInt($('.container').css('marginLeft'),10),
-            top: $(document).scrollTop() + windowHeight/2 - origin.parent('.material-placeholder').offset().top - newHeight/3
+            left: (windowWidth - newWidth) / 2 - origin.parent('.material-placeholder').offset().left + parseInt($('.container').css('marginLeft'),10),
+            top: (windowHeight - newHeight/3) / 2 - origin.parent('.material-placeholder').offset().top
           },
           {
             duration: inDuration,
@@ -1156,7 +1160,9 @@ $(document).ready(function(){
       });
 
     };
-}( jQuery ));;(function ($) {
+}
+
+( jQuery ));;(function ($) {
 
   var methods = {
     init : function() {
