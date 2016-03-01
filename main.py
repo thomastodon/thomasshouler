@@ -28,8 +28,8 @@ def project(project_id):
 
 	return render_template('project.html', project=project, assets=assets, links=links)
 
-@app.route('/cv')
-def cv(): return send_from_directory('static/assets/','shouler_thomas_cv.pdf', as_attachment=False, mimetype='pdf')
+@app.route('/cv.pdf')
+def cv(): return send_from_directory('static/assets/','shouler_thomas_cv.pdf', as_attachment=False)
 
 @app.errorhandler(404)
 def page_not_found(e):
