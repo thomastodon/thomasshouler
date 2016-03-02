@@ -957,24 +957,24 @@ if ($) {
           $photo_caption.velocity({opacity: 1}, {duration: inDuration, queue: false, easing: 'easeOutQuad'});
         }
 
-        windowWidth = $(this)[0].parentElement.parentElement.clientWidth
-        windowHeight = $(this)[0].parentElement.parentElement.clientHeight
+        divWidth = $(this)[0].parentElement.parentElement.clientWidth
+        divHeight = $(this)[0].parentElement.parentElement.clientHeight
 
         // Resize Image
         var ratio = 0;
-        var widthPercent = originalWidth / windowWidth;
-        var heightPercent = originalHeight / windowHeight;
+        var widthPercent = originalWidth / divWidth;
+        var heightPercent = originalHeight / divHeight;
         var newWidth = 0;
         var newHeight = 0;
 
-        if (originalHeight / windowHeight > originalWidth / windowWidth) {
+        if (originalHeight / divHeight > originalWidth / divWidth) {
 	        ratio = originalWidth / originalHeight;
-	        newWidth = windowHeight * 0.9 * ratio;
-	        newHeight = windowHeight * 0.9;
+	        newWidth = divHeight * 0.95 * ratio;
+	        newHeight = divHeight * 0.95;
       	} else {
 	        ratio = originalHeight / originalWidth;
-	        newWidth = windowWidth * 0.9;
-	        newHeight = windowWidth * 0.9 * ratio;
+	        newWidth = divWidth * 0.95;
+	        newHeight = divWidth * 0.95 * ratio;
       	}
 
         // Animate image + set z-index
@@ -985,8 +985,8 @@ if ($) {
 					  position: 'absolute',
             height: newHeight,
             width: newWidth,
-            left: (windowWidth - newWidth) / 2 - origin.parent('.material-placeholder').offset().left + parseInt($('.container').css('marginLeft'),10),
-            top: (windowHeight - newHeight/3) / 2 - origin.parent('.material-placeholder').offset().top
+            left: (divWidth - newWidth) / 2 - origin.parent('.material-placeholder').offset().left + parseInt($('.container').css('marginLeft'),10),
+            top: (divHeight - newHeight) / 2 - origin.parent('.material-placeholder').offset().top + parseInt($('.grid').offset().top, 10)
           },
           {
             duration: inDuration,
