@@ -42,7 +42,7 @@ div.container {
   height: 100%;
   margin: 0px 100px;
   max-width: 700px;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 div.grid {
@@ -51,6 +51,7 @@ div.grid {
   padding: 16px 0;
   flex: 2;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 div.stop-gap {

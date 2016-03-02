@@ -27,13 +27,13 @@
 
 	<div class=container>
 
-		<div id="header" style="height:auto;">
-			<div id="title" style="top:30px;">thomas shouler</div>
-			<img class=singleline src="static/assets/single_line.png" style="position:absolute; top:58px;">
-			<a href="http://thomasshouler.com" style="font-weight:100; position:absolute; top:60px;">http://thomasshouler.com</a>
+		<div id="header">
+			<div id="title">thomas shouler</div>
+			<a href="http://thomasshouler.com" style="font-weight:100; position:absolute; top:62px;">http://thomasshouler.com</a>
 		</div>
+		<img class=singleline src="static/assets/single_line.png">
 
-		<div class="grid">
+		<div class="grid" style="overflow:hidden;">
 			{% for project_id, project in projects.items() %}
 			<div style="position:absolute; left:{{project.left}}; top:{{project.top}};">
 				<a href="{{ url_for('project', project_id=project_id) }}"><img class="project" src="static/assets/{{project_id}}/id.png" style="width:{{project.width}};"></a>
