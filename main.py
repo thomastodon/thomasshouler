@@ -48,10 +48,8 @@ def application_error(e):
 # Generic Functions
 
 def order_dict(d, asc=False):
-
     od = OrderedDict(sorted(d.items()))
     if asc: return od
-
     items = list(od.items())
     items.reverse()
     od = OrderedDict(items)
@@ -60,26 +58,22 @@ def order_dict(d, asc=False):
 def get_project(id=None):
 	reader = csv.DictReader(open('static/project.csv'), delimiter=',', escapechar='\\')
 	projects = {}
-
 	for row in reader:
 		if id == row['id']: return row
 		key = row.pop('id')
 		if key in projects: pass
 		projects[key] = row
-
 	return projects
 
 def get_links(project_id=None):
 	reader = csv.DictReader(open('static/link.csv'), delimiter=',', escapechar='\\')
 	links = {}
-
 	for row in reader:
 		if project_id == row['project_id']:
 			row.pop('project_id')
 			key = row.pop('id')
 			if key in links: pass
 			links[key] = row
-
 	return links
 
 
