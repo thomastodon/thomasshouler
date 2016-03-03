@@ -45,6 +45,7 @@
 		<div id="description">
 			<p>{{project.description}}</p>
 			{% for link_id, link in links.items() %}
+				{% if loop.first %}<a class=via>via:&nbsp;</a>{% endif %}
 				<a class="link" href="{{link.address}}" target="_blank">{{ link_id }}</a>
 				{% if not loop.last %},&nbsp;{% endif %}
 			{% endfor %}

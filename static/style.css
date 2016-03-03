@@ -151,10 +151,18 @@ div#description > p {
   margin: 4px 0;
 }
 
-a {
+a.link {
   top: 40px;
   font-size: 14px;
   font-weight: 700;
+  color: #424242;
+  text-decoration: none;
+}
+
+a.via {
+  top: 40px;
+  font-size: 14px;
+  font-weight: 400;
   color: #424242;
   text-decoration: none;
 }
