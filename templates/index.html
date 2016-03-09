@@ -25,7 +25,7 @@
 
 <body>
 
-	<div class=container>
+	<div class=container style="overflow:visible;">
 
 		<div id="header">
 			<div id="title">thomas shouler</div>
@@ -33,7 +33,7 @@
 		</div>
 		<img class=singleline src="static/assets/single_line.png">
 
-		<div class="grid" style="overflow:hidden;">
+		<div class="sandbox">
 			{% for project_id, project in projects.items() %}
 			<div style="position:absolute; left:{{project.left}}; top:{{project.top}};">
 				<a href="{{ url_for('project', project_id=project_id) }}"><img class="project" src="static/assets/{{project_id}}/id.png" style="width:{{project.width}};"></a>
