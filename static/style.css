@@ -59,7 +59,7 @@ div.sandbox {
   -webkit-flex: 2;          /* Chrome */
   -ms-flex: 2;              /* IE 10 */
   flex: 2;     
-  overflow-y: scroll;
+  overflow-y: none;
   overflow-x: visible;
   position: relative;
 }

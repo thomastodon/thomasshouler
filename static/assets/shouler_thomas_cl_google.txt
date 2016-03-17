@@ -1,0 +1,14 @@
+Hi,
+
+Please accept this note as part of my application for a position on your team as a Technical Solutions Engineer.
+
+I am a self-starting and driven person, who can offer you an entirely self-taught software development background. In my current role, I’ve initiated and delivered multiple full stack python web applications, with complete autonomy, inside a non-tech organization. I built everything front to back, from configuring the web server gateway interface to building Polymer widgets on the UI. The latest, “Richard”, will be most representative of where my skill-set is today. It is adopted and relied upon by multiple project teams within my current company to deliver structural engineering services for a $10B, 6,000,000 sq-ft airport terminal.
+
+I find building bridges between business and software endlessly interesting, and would relish the opportunity to challenge myself alongside the talent at Google. I have several years experience solving software challenges within a non-tech enterprise context, where I’ve honed an unyielding sense of technical empathy.
+
+My resume and personal website (deployed on Google App Engine) are included in my application. I would like to share a link or source code for any of my work, but the intellectual property is that of my current company. Should you be interested in granting me an opportunity to interview, I can live demo my work and speak to my code in detail. I very much appreciate you taking the time to consider me for a position on your team. I hope we speak soon.
+
+
+Respectfully,
+
+Thomas Shouler

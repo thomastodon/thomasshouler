@@ -15,18 +15,19 @@ WORK:
 RICHARD / ARUP / MAY 2015 - PRESENT
 "Richard" is a full stack Python web application built to address at scale the analysis & design piece of a common structural engineering workflow. 
 	+ Initiated and delivered entire project with complete autonomy
-	+ Drove adoption to current use by multiple project teams delivering structural engineering services for a $10B, 6,000,000 sq-ft airport in Mexico City
-	+ Key underlying technologies include Celery, Flask, Highcharts, jQuery, MySQL, Oasys GSA, Polymer, and SQLAlchemy JQuery
+	+ Drove adoption to current use by multiple project teams to deliver structural engineering services in professional practice
+	+ Manages the analysis and design of 50,000 tonnes of steel for a $10B, 6,000,000 sq-ft airport project in Mexico City
+	+ Key underlying technologies include Celery, Flask, Highcharts, jQuery, MySQL, Oasys GSA, Polymer, and SQLAlchemy
 	+ Responsible for the design and full stack development of the project
 
 POLYTHREAD PAVILION / ARUP / SEP 2015 - FEB 2016 
 NEW YORK, USA 
 PolyThread Pavilion is a gallery installation completed with Jenny E. Sabin, commissioned by the Cooper Hewitt Smithsonian Design Museum.
 	+ Executed suite of empirical studies with autonomy to develop material models for different textiles
-	+ Managed relationship with client from contract negotiation to project Adobe Indesign completion
+	+ Managed relationship with client from contract negotiation to project completion
 	+ Responsible for the management and delivery of the project's structural engineering and material analysis scope with guidance from senior staff
 
-HELLO, GSA / ARUP / MAR 2014 - MAY 2015
+HELLO, GSA / ARUP / JAN 2015 - MAY 2015
 "Hello, GSA" is a full stack Python web application built as a proof of concept to demonstrate more scalable methods of visualizing structural analysis and design data for larger, complex buildings projects.
 	+ Researched existing adopted measures of data visualization alongside new methods of working with different technologies
 	+ Solicited global leadership to secure funding for development of project 
@@ -39,51 +40,46 @@ This project is a code block library for a visual algorithmic modelling platform
 	+ Responsible for the design and development of the code block library
 
 
-AWARDS:
-
-	ENR AWARDS 2013
-	GLOBAL BEST SMALL PROJECT
-
-	ARCHITIZER A+ AWARDS 2013
-	STUDENT DESIGN/BUILD WINNER
-
-	KENT FELLOWSHIP 2012
-	CORNELL UNIVERSITY
-
-	ROLBAND FELLOWSHIP 2012
-	CORNELL UNIVERSITY
-
-	ARUP REAL BIM AWARDS 2014
-	TECHNOLOGY CATEGORY WINNER
-
-
-TECHNOLOGY:
-
-	ACTIVELY USING: Javascript, SQLAlchemy, HTML/CSS, Rhinoceros, Flask, Python, Bash, Oasys GSA, Grasshopper, MySQL
-	
-	FAMILIAR WITH: MongoDB, Three.js, Adobe Illustrator, Adobe Photoshop, D3.js, Polymer
-
-
 EDUCATION:
 
-	CORNELL UNIVERSITY AUG 2011 - MAY 2012 
+	CORNELL UNIVERSITY / AUG 2011 - MAY 2012 
 	MEng, Structural Mechanics and Materials 
 	GPA = 3.92
 
-	CORNELL UNIVERSITY AUG 2007 - MAY 2011
+	CORNELL UNIVERSITY / AUG 2007 - MAY 2011
 	BS, Civil and Environmental Engineering
 	GPA = 3.42
 
 
-ETC:
+TECHNOLOGY:
 
-	PROFESSIONAL ENGINEER 2014
-	STATE OF CALIFORNIA 
+	ACTIVELY USING: JavaScript, SQLAlchemy, jQuery, HTML/CSS, Rhinoceros, Flask, Python, Bash, Oasys GSA, Grasshopper, MySQL
+	
+	FAMILIAR WITH: MongoDB, three.js, Adobe Illustrator, Adobe Photoshop, Adobe Indesign, D3.js, Polymer
 
-	VARSITY CROSS COUNTRY AND TRACK+FIELD 2008-2011
+
+AWARDS:
+
+	ENR AWARDS / 2013
+	GLOBAL BEST SMALL PROJECT
+
+	ARCHITIZER A+ AWARDS / 2013
+	STUDENT DESIGN/BUILD WINNER
+
+	KENT FELLOWSHIP / 2012
 	CORNELL UNIVERSITY
 
+	ROLBAND FELLOWSHIP / 2012
+	CORNELL UNIVERSITY
+
+	ARUP REAL BIM AWARDS / 2014
+	TECHNOLOGY CATEGORY WINNER
 
 
+ETC:
 
+	PROFESSIONAL ENGINEER / 2014
+	STATE OF CALIFORNIA 
 
+	VARSITY CROSS COUNTRY AND TRACK+FIELD / 2008-2011
+	CORNELL UNIVERSITY
