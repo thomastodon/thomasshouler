@@ -26,11 +26,15 @@ describe('front page', () => {
     let header;
 
     beforeEach(() => {
-      header = document.querySelector('.header')
+      header = document.querySelector('.header');
     });
 
     it('contains my name', () => {
-      expect(header.innerText).toBe('thomas shouler')
+      expect(header.querySelector('.title').innerText).toBe('thomas shouler');
+    });
+
+    it('contains a hand drawn line', () => {
+      expect(header.querySelector('.single-line')).not.toBeUndefined();
     });
   });
 
@@ -38,6 +42,4 @@ describe('front page', () => {
     vm.$destroy();
     vm.$el.remove();
   });
-
-  const page = () => document.querySelector('body').innerText
 });
