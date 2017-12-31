@@ -1,9 +1,18 @@
-## Personal Website
+# thomas shouler
 
-Built with Flask and Polymer
+> A Vue.js project
 
-Deployed on Google App Engine
+## Build Setup
 
-## Notes
+``` bash
+# install dependencies
+npm install
 
-Append new projects to the csv file with a unique id
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+```
+
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
