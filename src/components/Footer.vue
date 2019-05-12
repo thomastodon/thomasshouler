@@ -23,7 +23,7 @@
   }
 
   img:hover {
-    opacity: .6;
+    opacity: 0.6;
     transition-duration: 0.3s;
   }
 

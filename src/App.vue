@@ -16,6 +16,10 @@
       tsHeader,
       tsFooter
     },
+
+    beforeCreate() {
+      document.title = 'thomas shouler';
+    }
   }
 </script>
 

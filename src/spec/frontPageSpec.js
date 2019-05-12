@@ -1,7 +1,7 @@
 import App from '../App.vue';
 import Vue from 'vue';
 
-describe('front page', () => {
+describe('on the front page...', () => {
 
   let vm;
 
@@ -21,7 +21,14 @@ describe('front page', () => {
 
   });
 
-  describe('header', () => {
+  describe('the title', () => {
+
+    it('contains my name', () => {
+      expect(document.title).toBe('thomas shouler');
+    });
+  });
+
+  describe('the header', () => {
 
     let header;
 
