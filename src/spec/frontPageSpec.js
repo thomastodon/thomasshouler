@@ -24,7 +24,7 @@ describe('on the front page...', () => {
   describe('the title', () => {
 
     it('contains my name', () => {
-      expect(document.title).toBe('thomas shouler');
+      expect(document.title).to.equal('thomas shouler');
     });
   });
 
@@ -37,11 +37,11 @@ describe('on the front page...', () => {
     });
 
     it('contains my name', () => {
-      expect(header.querySelector('.title').innerText).toBe('thomas shouler');
+      expect(header.querySelector('.title').innerText).to.equal('thomas shouler');
     });
 
     it('contains a hand drawn line', () => {
-      expect(header.querySelector('.single-line')).not.toBeUndefined();
+      expect(header.querySelector('.single-line')).to.exist;
     });
   });
 
@@ -54,7 +54,7 @@ describe('on the front page...', () => {
     });
 
     it('contains a single icon', () => {
-      expect(footer.querySelectorAll('.icon').length).toBe(1);
+      expect(footer.querySelectorAll('.icon').length).to.equal(1);
     });
   });
 
