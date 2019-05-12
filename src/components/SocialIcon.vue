@@ -15,7 +15,7 @@
 <style scoped lang="scss">
 
   a.social-icon > img {
-    height: 1.7rem;
+    height: 1.5rem;
     opacity: 0.3;
     margin: 0.2rem;
   }

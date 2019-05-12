@@ -27,7 +27,7 @@
   @import 'main';
 
   div {
-    margin: 0 6rem 0 6rem;
+    margin: 0 4rem 0 4rem;
   }
 
   body {
