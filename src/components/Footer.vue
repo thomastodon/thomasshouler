@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <single-line></single-line>
-    <a target="_blank" href="http://thomasshouler.tumblr.com" class="icon">
+    <a href="http://thomasshouler.tumblr.com" class="icon" id="light-bulb">
       <img src="bulb-inv.png">
     </a>
   </div>
