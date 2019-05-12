@@ -60,6 +60,30 @@ describe('on the front page...', () => {
     it('contains a link to my strava profile', () => {
       expect(footer.querySelector('#strava').href).to.equal('http://www.strava.com/athletes/tmshouler');
     });
+
+    it('contains a link to my flickr', () => {
+      expect(footer.querySelector('#flickr').href).to.equal('http://www.flickr.com/photos/111512626@N08/sets/');
+    });
+
+    it('contains a link to my github', () => {
+      expect(footer.querySelector('#git').href).to.equal('http://github.com/thomastodon');
+    });
+
+    it('contains a link to my instagram', () => {
+      expect(footer.querySelector('#insta').href).to.equal('http://instagram.com/thomasshouler');
+    });
+
+    it('contains a link to my linkedin', () => {
+      expect(footer.querySelector('#linkd').href).to.equal('http://www.linkedin.com/in/thomasshouler');
+    });
+
+    it('contains a link to my stackoverflow', () => {
+      expect(footer.querySelector('#stack').href).to.equal('http://stackoverflow.com/users/3746982/thomasshouler');
+    });
+
+    it('contains a link to my vimeo', () => {
+      expect(footer.querySelector('#vimeo').href).to.equal('http://vimeo.com/user22045579');
+    });
   });
 
   afterEach(() => {
