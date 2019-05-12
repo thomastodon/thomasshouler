@@ -45,6 +45,19 @@ describe('on the front page...', () => {
     });
   });
 
+  describe('the footer', () => {
+
+    let footer;
+
+    beforeEach(() => {
+      footer = document.querySelector('.footer');
+    });
+
+    it('contains a single icon', () => {
+      expect(footer.querySelectorAll('.icon').length).toBe(1);
+    });
+  });
+
   afterEach(() => {
     vm.$destroy();
     vm.$el.remove();

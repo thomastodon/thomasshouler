@@ -1,7 +1,9 @@
 <template>
   <div class="footer">
     <single-line></single-line>
-    <img class=social-icon src="bulb-inv.png">
+    <a target="_blank" href="http://thomasshouler.tumblr.com" class="icon">
+      <img src="bulb-inv.png">
+    </a>
   </div>
 </template>
 
@@ -17,12 +19,12 @@
 
 <style scoped lang="scss">
 
-  img {
+  a.icon > img {
     height: 1.75rem;
     opacity: 0.3;
   }
 
-  img:hover {
+  a.icon > img:hover {
     opacity: 0.6;
     transition-duration: 0.3s;
   }
