@@ -14,7 +14,7 @@
 
 <style scoped lang="scss">
 
-  div {
+  div.single-line {
     margin: 0;
   }
 
