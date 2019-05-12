@@ -53,8 +53,12 @@ describe('on the front page...', () => {
       footer = document.querySelector('.footer');
     });
 
-    it('contains a single icon', () => {
-      expect(footer.querySelectorAll('.icon').length).to.equal(1);
+    it('contains a link to my tumblr', () => {
+      expect(footer.querySelector('#light-bulb').href).to.equal('http://thomasshouler.tumblr.com/');
+    });
+
+    it('contains a link to my strava profile', () => {
+      expect(footer.querySelector('#strava').href).to.equal('http://www.strava.com/athletes/tmshouler');
     });
   });
 

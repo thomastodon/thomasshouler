@@ -4,12 +4,16 @@
     <a href="http://thomasshouler.tumblr.com" class="icon" id="light-bulb">
       <img src="bulb-inv.png">
     </a>
+    <a href="http://www.strava.com/athletes/tmshouler" class="icon" id="strava">
+      <img src="strava-inv.png">
+    </a>
   </div>
 </template>
 
 <script>
   import SingleLine from './SingleLine';
   import '../assets/icon/bulb-inv.png';
+  import '../assets/icon/strava-inv.png';
 
   export default {
     name: 'ts-footer',
