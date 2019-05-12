@@ -54,7 +54,7 @@ describe('on the front page...', () => {
     });
 
     it('contains a link to my tumblr', () => {
-      expect(footer.querySelector('#light-bulb').href).to.equal('http://thomasshouler.tumblr.com/');
+      expect(footer.querySelector('#bulb').href).to.equal('http://thomasshouler.tumblr.com/');
     });
 
     it('contains a link to my strava profile', () => {

@@ -12,7 +12,7 @@ context('app', () => {
     describe('when i click on the light bulb', () => {
 
       beforeEach('', () => {
-        cy.get('#light-bulb').click();
+        cy.get('#bulb').click();
       });
 
       it('we should be sent to my tumblr', () => {

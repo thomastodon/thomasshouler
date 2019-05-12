@@ -1,37 +1,24 @@
 <template>
   <div class="footer">
     <single-line></single-line>
-    <a href="http://thomasshouler.tumblr.com" class="icon" id="light-bulb">
-      <img src="bulb-inv.png">
-    </a>
-    <a href="http://www.strava.com/athletes/tmshouler" class="icon" id="strava">
-      <img src="strava-inv.png">
-    </a>
+    <social-icon url="http://thomasshouler.tumblr.com" image="bulb"></social-icon>
+    <social-icon url="http://www.strava.com/athletes/tmshouler" image="strava"></social-icon>
   </div>
 </template>
 
 <script>
   import SingleLine from './SingleLine';
-  import '../assets/icon/bulb-inv.png';
-  import '../assets/icon/strava-inv.png';
+  import SocialIcon from './SocialIcon';
+  import '../assets/icon/bulb.png';
+  import '../assets/icon/strava.png';
 
   export default {
     name: 'ts-footer',
-    components: {SingleLine},
+    components: {SocialIcon, SingleLine},
   }
 </script>
 
 <style scoped lang="scss">
-
-  a.icon > img {
-    height: 1.75rem;
-    opacity: 0.3;
-  }
-
-  a.icon > img:hover {
-    opacity: 0.6;
-    transition-duration: 0.3s;
-  }
 
   div.footer {
     margin: 2rem 0 0 0;
