@@ -1,23 +1,24 @@
 <template>
   <div class="header">
     <a class="title">thomas shouler</a>
-    <img class=single-line src="single_line.png">
+    <single-line></single-line>
     <a class="link">http://thomasshouler.io</a>
   </div>
 </template>
 
 <script>
-  import '../assets/single_line.png';
+  import SingleLine from './SingleLine';
 
   export default {
     name: 'ts-header',
+    components: {SingleLine},
   }
 </script>
 
 <style scoped lang="scss">
   @import '../main';
 
-  div {
+  div.header {
     margin: 2rem 0 0 0;
     height: 2.75rem;
     max-width: 40rem;
@@ -30,9 +31,7 @@
     color: $dark-gray;
   }
 
-  img.single-line {
-    width: 100%;
-    height: 1px;
+  div.single-line {
     position: relative;
     top: -0.75rem;
   }

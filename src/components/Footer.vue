@@ -1,14 +1,15 @@
 <template>
   <div class="footer">
-    <img class=single-line src="single_line.png">
+    <single-line></single-line>
   </div>
 </template>
 
 <script>
-  import '../assets/single_line.png';
+  import SingleLine from './SingleLine';
 
   export default {
     name: 'ts-footer',
+    components: {SingleLine},
   }
 </script>
 
@@ -21,13 +22,6 @@
     max-width: 40rem;
     position: fixed;
     bottom: 1rem;
-  }
-
-  img.single-line {
-    width: 100%;
-    height: 1px;
-    position: relative;
-    top: -0.75rem;
   }
 
 </style>
