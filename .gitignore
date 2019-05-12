@@ -3,3 +3,6 @@ node_modules
 .DS_Store
 dist
 *.iml
+
+cypress/videos
+cypress/screenshots

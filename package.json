@@ -8,9 +8,16 @@
   "scripts": {
     "dev": "webpack-dev-server --open --hot --config webpack.development.js",
     "build": "webpack --config webpack.production.js",
-    "test": "karma start src/karma.conf.js"
+    "start": "serve -s dist --listen 8080",
+    "start:test": "serve -s dist --listen 4000",
+    "stop": "kill $(lsof -t -i:8080)",
+    "stop:test": "kill $(lsof -t -i:4000)",
+    "test": "npm run test:unit && npm run test:journey",
+    "test:unit": "karma start src/karma.conf.js",
+    "test:journey": "npm run build && npm run start:test & cypress run && npm run stop:test"
   },
   "dependencies": {
+    "serve": "^11.0.0",
     "vue": "2.6.10"
   },
   "browserslist": [
@@ -27,6 +34,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
+    "cypress": "^3.2.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "karma": "^1.5.0",
