@@ -1,17 +1,20 @@
 <template>
   <div class="container">
     <ts-header></ts-header>
+    <ts-footer></ts-footer>
   </div>
 </template>
 
 <script>
   import tsHeader from './components/Header.vue';
+  import tsFooter from './components/Footer.vue';
 
   export default {
     name: 'app',
 
     components: {
-      tsHeader
+      tsHeader,
+      tsFooter
     },
   }
 </script>
