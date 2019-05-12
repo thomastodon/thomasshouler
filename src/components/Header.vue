@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-    <a class="title">thomas shouler</a>
+    <span class="title">thomas shouler</span>
     <single-line></single-line>
-    <a class="link">http://thomasshouler.io</a>
+    <a class="link" href="http://thomasshouler.io">http://thomasshouler.io</a>
   </div>
 </template>
 
@@ -24,7 +24,7 @@
     max-width: 40rem;
   }
 
-  a.title {
+  span.title {
     margin: 0;
     font-size: 1.4rem;
     font-weight: 700;
@@ -42,5 +42,6 @@
     color: $dark-gray;
     position: relative;
     top: -1rem;
+    text-decoration: none;
   }
 </style>
