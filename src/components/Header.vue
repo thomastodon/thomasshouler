@@ -6,13 +6,22 @@
 </template>
 
 <script>
-  require('../assets/single_line.png');
+  import '../assets/single_line.png';
+
   export default {
     name: 'ts-header',
   }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+  @import '../main';
+
+  a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $dark-gray;
+  }
+
   img.single-line {
     width: 100%;
     height: 1px;

@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-
-require('../static/favicon.png');
+import '../static/favicon.png';
 
 new Vue({
   el: '#app',

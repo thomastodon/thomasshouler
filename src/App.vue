@@ -13,3 +13,12 @@
     },
   }
 </script>
+
+<style lang="scss">
+  @import 'main';
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $light-gray;
+  }
+</style>
