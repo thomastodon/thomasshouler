@@ -8,6 +8,7 @@
 <script>
   import tsHeader from './components/Header.vue';
   import tsFooter from './components/Footer.vue';
+  import './assets/cv.pdf';
 
   export default {
     name: 'app',
