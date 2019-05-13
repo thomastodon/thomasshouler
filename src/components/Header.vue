@@ -2,7 +2,7 @@
   <div class="header">
     <span class="title">thomas shouler</span>
     <single-line></single-line>
-    <a class="link" href="http://thomasshouler.io">http://thomasshouler.io</a>
+    <a class="link" href="https://thomasshouler.io">https://thomasshouler.io</a>
   </div>
 </template>
 
