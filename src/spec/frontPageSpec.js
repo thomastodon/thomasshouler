@@ -58,7 +58,7 @@ describe('on the front page...', () => {
     });
 
     it('contains a link to my strava profile', () => {
-      expect(footer.querySelector('#strava').href).to.equal('http://www.strava.com/athletes/tmshouler');
+      expect(footer.querySelector('#strava').href).to.equal('http://www.strava.com/athletes/thomasshouler');
     });
 
     it('contains a link to my flickr', () => {
