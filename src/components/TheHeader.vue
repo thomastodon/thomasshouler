@@ -21,7 +21,6 @@
   div.the-header {
     margin: 2rem 0 0 0;
     height: 2.75rem;
-    max-width: 40rem;
   }
 
   span.title {

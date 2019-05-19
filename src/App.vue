@@ -13,3 +13,15 @@
     }
   }
 </script>
+
+<style lang="scss">
+  @import 'main';
+
+  body {
+    background-color: $light-gray;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    overflow: hidden;
+  }
+</style>

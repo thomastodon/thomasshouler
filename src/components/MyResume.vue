@@ -17,9 +17,7 @@
         .storage()
         .ref('shouler_thomas_cv.pdf')
         .getDownloadURL()
-        .then(url => {
-          this.$el.querySelector('embed').src = url;
-        });
+        .then(url => this.$el.querySelector('embed').src = url);
     },
   }
 </script>

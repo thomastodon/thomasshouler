@@ -52,6 +52,13 @@ module.exports = {
         options: {
           name: 'images/[name].[ext]'
         }
+      },
+      {
+        test: /\.csv$/,
+        loader: 'file-loader',
+        options: {
+          name: 'data/[name].[ext]'
+        }
       }
     ]
   },

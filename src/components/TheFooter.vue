@@ -33,11 +33,7 @@
 <style scoped lang="scss">
 
   div.the-footer {
-    margin: 2rem 0 0 0;
-    height: 2.75rem;
-    max-width: 40rem;
-    position: fixed;
-    bottom: 1rem;
+    height: 3.5rem;
   }
 
 </style>
