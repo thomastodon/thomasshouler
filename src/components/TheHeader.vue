@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="the-header">
     <span class="title">thomas shouler</span>
     <single-line></single-line>
     <a class="link" href="https://thomasshouler.io">https://thomasshouler.io</a>
@@ -10,7 +10,7 @@
   import SingleLine from './SingleLine';
 
   export default {
-    name: 'ts-header',
+    name: 'the-header',
     components: {SingleLine},
   }
 </script>
@@ -18,7 +18,7 @@
 <style scoped lang="scss">
   @import '../main';
 
-  div.header {
+  div.the-header {
     margin: 2rem 0 0 0;
     height: 2.75rem;
     max-width: 40rem;

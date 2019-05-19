@@ -1,5 +1,9 @@
 import App from '../App.vue';
 import Vue from 'vue';
+import router from './../router'
+
+Vue.config.devtools = false;
+Vue.config.productionTip = false;
 
 describe('on the front page...', () => {
 
@@ -16,6 +20,7 @@ describe('on the front page...', () => {
 
     vm = new Vue({
       el: '#spec',
+      router: router,
       render: (h) => h(App)
     });
 
@@ -30,59 +35,59 @@ describe('on the front page...', () => {
 
   describe('the header', () => {
 
-    let header;
+    let theHeader;
 
     beforeEach(() => {
-      header = document.querySelector('.header');
+      theHeader = document.querySelector('.the-header');
     });
 
     it('contains my name', () => {
-      expect(header.querySelector('.title').innerText).to.equal('thomas shouler');
+      expect(theHeader.querySelector('.title').innerText).to.equal('thomas shouler');
     });
 
     it('contains a hand drawn line', () => {
-      expect(header.querySelector('.single-line')).to.exist;
+      expect(theHeader.querySelector('.single-line')).to.exist;
     });
   });
 
   describe('the footer', () => {
 
-    let footer;
+    let theFooter;
 
     beforeEach(() => {
-      footer = document.querySelector('.footer');
+      theFooter = document.querySelector('.the-footer');
     });
 
     it('contains a link to my tumblr', () => {
-      expect(footer.querySelector('#bulb').href).to.equal('http://thomasshouler.tumblr.com/');
+      expect(theFooter.querySelector('#bulb').href).to.equal('http://thomasshouler.tumblr.com/');
     });
 
     it('contains a link to my strava profile', () => {
-      expect(footer.querySelector('#strava').href).to.equal('http://www.strava.com/athletes/thomasshouler');
+      expect(theFooter.querySelector('#strava').href).to.equal('http://www.strava.com/athletes/thomasshouler');
     });
 
     it('contains a link to my flickr', () => {
-      expect(footer.querySelector('#flickr').href).to.equal('http://www.flickr.com/photos/111512626@N08/sets/');
+      expect(theFooter.querySelector('#flickr').href).to.equal('http://www.flickr.com/photos/111512626@N08/sets/');
     });
 
     it('contains a link to my github', () => {
-      expect(footer.querySelector('#git').href).to.equal('http://github.com/thomastodon');
+      expect(theFooter.querySelector('#git').href).to.equal('http://github.com/thomastodon');
     });
 
     it('contains a link to my instagram', () => {
-      expect(footer.querySelector('#insta').href).to.equal('http://instagram.com/thomasshouler');
+      expect(theFooter.querySelector('#insta').href).to.equal('http://instagram.com/thomasshouler');
     });
 
     it('contains a link to my linkedin', () => {
-      expect(footer.querySelector('#linkd').href).to.equal('http://www.linkedin.com/in/thomasshouler');
+      expect(theFooter.querySelector('#linkd').href).to.equal('http://www.linkedin.com/in/thomasshouler');
     });
 
     it('contains a link to my stackoverflow', () => {
-      expect(footer.querySelector('#stack').href).to.equal('http://stackoverflow.com/users/3746982/thomasshouler');
+      expect(theFooter.querySelector('#stack').href).to.equal('http://stackoverflow.com/users/3746982/thomasshouler');
     });
 
     it('contains a link to my vimeo', () => {
-      expect(footer.querySelector('#vimeo').href).to.equal('http://vimeo.com/user22045579');
+      expect(theFooter.querySelector('#vimeo').href).to.equal('http://vimeo.com/user22045579');
     });
   });
 

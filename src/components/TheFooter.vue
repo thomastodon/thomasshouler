@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="the-footer">
     <single-line></single-line>
     <social-icon url="http://www.flickr.com/photos/111512626@N08/sets/" image="flickr"></social-icon>
     <social-icon url="http://github.com/thomastodon" image="git"></social-icon>
@@ -25,14 +25,14 @@
   import '../assets/icon/vimeo.png';
 
   export default {
-    name: 'ts-footer',
+    name: 'the-footer',
     components: {SocialIcon, SingleLine},
   }
 </script>
 
 <style scoped lang="scss">
 
-  div.footer {
+  div.the-footer {
     margin: 2rem 0 0 0;
     height: 2.75rem;
     max-width: 40rem;
