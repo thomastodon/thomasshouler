@@ -1,36 +1,12 @@
-import App from '../App.vue';
-import Vue from 'vue';
-import router from './../router'
+import {setup, tearDown} from './utility';
+import MyProjects from "../components/MyProjects";
 
-Vue.config.devtools = false;
-Vue.config.productionTip = false;
-
-describe('on the front page...', () => {
+describe('on my projects page...', () => {
 
   let vm;
 
-  Vue.config.devtools = false;
-  Vue.config.productionTip = false;
-
   beforeEach(() => {
-
-    const spec = document.createElement('div');
-    spec.id = 'spec';
-    document.querySelector('body').appendChild(spec);
-
-    vm = new Vue({
-      el: '#spec',
-      router: router,
-      render: (h) => h(App)
-    });
-
-  });
-
-  describe('the title', () => {
-
-    it('contains my name', () => {
-      expect(document.title).to.equal('thomas shouler');
-    });
+    vm = setup(MyProjects);
   });
 
   describe('the header', () => {
@@ -91,8 +67,5 @@ describe('on the front page...', () => {
     });
   });
 
-  afterEach(() => {
-    vm.$destroy();
-    vm.$el.remove();
-  });
+  afterEach(() => tearDown(vm));
 });
