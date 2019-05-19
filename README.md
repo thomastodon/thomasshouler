@@ -15,3 +15,8 @@ npm run build
 firebase login
 firebase deploy
 ```
+
+## upload files to storage
+```
+gsutil cp <full-path-to-file> gs://thomasshouler-id.appspot.com
+```
