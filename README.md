@@ -16,7 +16,12 @@ firebase login
 firebase deploy
 ```
 
-## upload files to storage
+## storage
+__push__ local content up to remote:
 ```
-gsutil cp <full-path-to-file> gs://thomasshouler-id.appspot.com
+gsutil -m rsync -d -r storage/. gs://thomasshouler-id.appspot.com
+```
+__pull__ remote content down to local:
+```
+gsutil -m rsync -d -r gs://thomasshouler-id.appspot.com storage/.
 ```
