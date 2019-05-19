@@ -7,8 +7,8 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.production.js",
+    "dev": "webpack-dev-server --open --hot --config webpack.development.js",
     "start": "serve -s dist --listen 8080",
-    "start:dev": "webpack-dev-server --open --hot --config webpack.development.js",
     "start:test": "serve -s dist --listen 4000",
     "test": "npm run test:unit && npm run test:journey",
     "test:unit": "karma start src/karma.conf.js",

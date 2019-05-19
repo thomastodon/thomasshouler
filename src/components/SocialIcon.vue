@@ -1,6 +1,6 @@
 <template>
   <a :href="url" class="social-icon" :id="image">
-    <img v-bind:src="image + '.png'">
+    <img v-bind:src="'images/' + image + '.png'">
   </a>
 </template>
 

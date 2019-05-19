@@ -47,10 +47,10 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif|svg|pdf)$/,
+        test: /\.png$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          name: 'images/[name].[ext]'
         }
       }
     ]

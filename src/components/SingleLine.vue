@@ -1,6 +1,6 @@
 <template>
   <div class="single-line">
-    <img class=single-line src="single_line.png">
+    <img class=single-line src="images/single_line.png">
   </div>
 </template>
 
