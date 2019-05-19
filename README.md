@@ -17,6 +17,10 @@ firebase deploy
 ```
 
 ## storage
+login:
+```
+gcloud auth login
+```
 __push__ local content up to remote:
 ```
 gsutil -m rsync -d -r storage/. gs://thomasshouler-id.appspot.com
