@@ -1,5 +1,8 @@
 <template>
-  <div class="project-listing" v-bind:style="{ top: top, left: left }">
+  <div
+    class="project-listing"
+    v-on:click="navigate(id)"
+    v-bind:style="{ top: top, left: left }">
     <img v-bind:style="{ width: width }">
   </div>
 </template>
@@ -7,6 +10,7 @@
 <script>
   import * as firebase from 'firebase/app';
   import 'firebase/storage';
+  import router from '../router'
 
   export default {
     name: 'project-listing',
@@ -22,6 +26,11 @@
         .ref('my-projects/' + this.id + '/id.png')
         .getDownloadURL()
         .then(url => this.$el.querySelector('img').src = url);
+    },
+    methods: {
+      navigate(id) {
+        router.push({path: `/project/${id}`});
+      }
     }
   }
 </script>
