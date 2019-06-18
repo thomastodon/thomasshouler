@@ -28,18 +28,12 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader'
-        ],
-      }, {
+        use: ['vue-style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: {
-          loaders: {}
-          // other vue-loader options go here
-        }
+        options: {loaders: {}}
       },
       {
         test: /\.js$/,
@@ -49,16 +43,12 @@ module.exports = {
       {
         test: /\.png$/,
         loader: 'file-loader',
-        options: {
-          name: 'images/[name].[ext]'
-        }
+        options: {name: 'assets/[name].[ext]'}
       },
       {
         test: /\.csv$/,
         loader: 'file-loader',
-        options: {
-          name: 'data/[name].[ext]'
-        }
+        options: {name: 'data/[name].[ext]'}
       }
     ]
   },

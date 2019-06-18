@@ -15,14 +15,6 @@
 <script>
   import SingleLine from './SingleLine';
   import SocialIcon from './SocialIcon';
-  import '../assets/flickr.png';
-  import '../assets/git.png';
-  import '../assets/insta.png';
-  import '../assets/linkd.png';
-  import '../assets/stack.png';
-  import '../assets/strava.png';
-  import '../assets/bulb.png';
-  import '../assets/vimeo.png';
 
   export default {
     name: 'the-footer',

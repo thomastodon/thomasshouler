@@ -1,10 +1,18 @@
 <template>
   <a :href="url" class="social-icon" :id="image">
-    <img v-bind:src="'images/' + image + '.png'">
+    <img v-bind:src="'./../assets/' + image + '.png'">
   </a>
 </template>
 
 <script>
+  import '../assets/flickr.png';
+  import '../assets/git.png';
+  import '../assets/insta.png';
+  import '../assets/linkd.png';
+  import '../assets/stack.png';
+  import '../assets/strava.png';
+  import '../assets/bulb.png';
+  import '../assets/vimeo.png';
 
   export default {
     name: 'social-icon',

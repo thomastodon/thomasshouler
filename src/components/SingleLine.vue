@@ -1,12 +1,10 @@
 <template>
   <div class="single-line">
-    <img class=single-line src="images/single_line.png">
+    <img class=single-line src="./../assets/single_line.png">
   </div>
 </template>
 
 <script>
-  import '../assets/single_line.png';
-
   export default {
     name: 'single-line',
   }
