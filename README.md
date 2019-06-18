@@ -1,5 +1,12 @@
 # thomas shouler
 
+## dependencies
+```
+brew install npm firebase-cli
+brew cask install google-cloud-sdk
+npm install
+```
+
 ## test
 ```
 npm test

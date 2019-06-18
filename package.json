@@ -8,15 +8,12 @@
   "scripts": {
     "build": "webpack --config webpack.production.js",
     "dev": "webpack-dev-server --open --hot --config webpack.development.js",
-    "start": "serve -s dist --listen 8080",
-    "start:test": "serve -s dist --listen 4000",
     "test": "npm run test:unit && npm run test:journey",
     "test:unit": "karma start src/karma.conf.js",
     "test:journey": "npm run build && start-server-and-test start:test http://localhost:4000 \"cypress run\""
   },
   "dependencies": {
     "firebase": "^6.0.2",
-    "serve": "^11.0.0",
     "vue": "2.6.10",
     "vue-router": "^3.0.6"
   },
