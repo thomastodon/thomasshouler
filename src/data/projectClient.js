@@ -14,12 +14,13 @@ export const getProjects = () => {
     if (rawFile.status !== 200 && rawFile.status !== 0) return;
 
     const records = rawFile.responseText.split(/\r\n|\n/);
-    const headers = records.shift().split(',');
+    const commaRegex = /(?<!\\),/;
+    const headers = records.shift().split(commaRegex);
 
     records
-      .map(line => line.split(','))
-      .map(lineValues => {
-        const object = Object.assign({}, ...headers.map((header, index) => ({[header]: lineValues[index]})));
+      .map(line => line.split(commaRegex))
+      .map(record => {
+        const object = Object.assign({}, ...headers.map(parse(record)));
         objects.push(object);
       });
   };
@@ -27,3 +28,7 @@ export const getProjects = () => {
 
   return objects;
 };
+
+function parse(record) {
+  return (header, index) => ({[header]: record[index].replace(/\\/g, '')});
+}

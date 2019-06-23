@@ -3,7 +3,7 @@
     <the-header></the-header>
     <br>
     <div class="description">
-      {{project.description}}
+      {{description}}
     </div>
     <the-footer></the-footer>
   </div>
@@ -25,6 +25,9 @@
     computed: {
       project() {
         return this.$store.getters.findProjectById(this.id);
+      },
+      description() {
+        return this.project ? this.project.description : ""
       }
     }
   }
