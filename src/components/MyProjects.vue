@@ -19,8 +19,6 @@
   import TheHeader from './TheHeader';
   import TheFooter from './TheFooter';
   import ProjectListing from './ProjectListing';
-  import {csvToObjects} from '../utility';
-  import '../data/project.csv';
 
   export default {
     name: 'my-projects',
@@ -29,9 +27,9 @@
       theFooter: TheFooter,
       projectListing: ProjectListing,
     },
-    data() {
-      return {
-        projects: csvToObjects('../data/project.csv')
+    computed: {
+      projects() {
+        return this.$store.state.projects;
       }
     }
   }

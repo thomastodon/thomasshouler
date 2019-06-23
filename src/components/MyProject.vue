@@ -1,7 +1,10 @@
 <template>
   <div class="my-project">
     <the-header></the-header>
-    <div class="description"></div>
+    <br>
+    <div class="description">
+      {{project.description}}
+    </div>
     <the-footer></the-footer>
   </div>
 </template>
@@ -9,20 +12,19 @@
 <script>
   import TheHeader from './TheHeader';
   import TheFooter from './TheFooter';
-  import ProjectListing from './ProjectListing';
-  import {csvToObjects} from '../utility';
-  import '../data/project.csv';
 
   export default {
     name: 'my-project',
+    props: {
+      id: String
+    },
     components: {
       theHeader: TheHeader,
       theFooter: TheFooter,
-      projectListing: ProjectListing,
     },
-    data() {
-      return {
-        projects: csvToObjects('../data/project.csv')
+    computed: {
+      project() {
+        return this.$store.getters.findProjectById(this.id);
       }
     }
   }

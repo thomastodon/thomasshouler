@@ -1,9 +1,13 @@
-export const csvToObjects = (path) => {
+const url = '../data/project.csv';
+const async = false;
+import '../data/project.csv';
+
+export const getProjects = () => {
 
   const objects = [];
 
   const rawFile = new XMLHttpRequest();
-  rawFile.open("GET", path, true);
+  rawFile.open("GET", url, async);
   rawFile.onreadystatechange = function () {
 
     if (rawFile.readyState !== 4) return;
@@ -15,12 +19,11 @@ export const csvToObjects = (path) => {
     records
       .map(line => line.split(','))
       .map(lineValues => {
-
         const object = Object.assign({}, ...headers.map((header, index) => ({[header]: lineValues[index]})));
         objects.push(object);
       });
   };
-  rawFile.send(null);
+  rawFile.send();
 
   return objects;
 };

@@ -8,6 +8,7 @@
   "scripts": {
     "build": "webpack --config webpack.production.js",
     "dev": "webpack-dev-server --open --hot --config webpack.development.js",
+    "start:test": "serve -s dist --listen 4000",
     "test": "npm run test:unit && npm run test:journey",
     "test:unit": "karma start src/karma.conf.js",
     "test:journey": "npm run build && start-server-and-test start:test http://localhost:4000 \"cypress run\""
@@ -15,7 +16,8 @@
   "dependencies": {
     "firebase": "^6.0.2",
     "vue": "2.6.10",
-    "vue-router": "^3.0.6"
+    "vue-router": "^3.0.6",
+    "vuex": "^3.1.1"
   },
   "browserslist": [
     "> 1%",
@@ -43,6 +45,7 @@
     "mocha": "^6.1.4",
     "node-sass": "^4.9.2",
     "sass-loader": "^6.0.7",
+    "serve": "^11.0.0",
     "start-server-and-test": "^1.9.0",
     "vue-loader": "15.7.0",
     "vue-template-compiler": "2.6.10",

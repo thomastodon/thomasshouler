@@ -10,6 +10,6 @@ export default new VueRouter({
   routes: [
     {path: '/', component: MyProjects},
     {path: '/cv', component: MyResume},
-    {path: '/project/:id', component: MyProject}
+    {path: '/project/:id', component: MyProject, props: true}
   ]
 });
