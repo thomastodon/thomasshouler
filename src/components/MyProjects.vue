@@ -1,6 +1,6 @@
 <template>
   <div class="my-projects">
-    <the-header></the-header>
+    <the-header title="thomas shouler"></the-header>
     <div class="my-project-listings">
       <project-listing
         v-for="project in projects"

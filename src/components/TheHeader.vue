@@ -1,17 +1,22 @@
 <template>
   <div class="the-header">
-    <span class="title">thomas shouler</span>
-    <single-line></single-line>
-    <a class="link" href="https://thomasshouler.io">https://thomasshouler.io</a>
+    <div class="text">
+      <span class="title">{{title}}</span>
+      <a class="link" href="https://thomasshouler.io">https://thomasshouler.io</a>
+    </div>
+    <double-line></double-line>
   </div>
 </template>
 
 <script>
-  import SingleLine from './SingleLine';
+  import DoubleLine from './DoubleLine';
 
   export default {
     name: 'the-header',
-    components: {SingleLine},
+    props: {
+      title: String,
+    },
+    components: {DoubleLine},
   }
 </script>
 
@@ -23,6 +28,12 @@
     height: 2.75rem;
   }
 
+  div.the-header > .text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   span.title {
     margin: 0;
     font-size: 1.4rem;
@@ -30,17 +41,16 @@
     color: $dark-gray;
   }
 
-  div.single-line {
+  div.double-line {
     position: relative;
-    top: -0.75rem;
+    top: -0.5rem;
   }
 
   a.link {
     font-size: 0.85rem;
     font-weight: 100;
     color: $dark-gray;
-    position: relative;
-    top: -1rem;
     text-decoration: none;
+    align-self: flex-end;
   }
 </style>

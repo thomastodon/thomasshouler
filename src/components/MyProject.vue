@@ -1,10 +1,8 @@
 <template>
   <div class="my-project">
-    <the-header></the-header>
+    <the-header :title="id"></the-header>
     <br>
-    <div class="description">
-      {{description}}
-    </div>
+    <div class="description">{{description}}</div>
     <the-footer></the-footer>
   </div>
 </template>
