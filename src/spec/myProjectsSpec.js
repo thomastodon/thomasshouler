@@ -21,8 +21,8 @@ describe('on my projects page...', () => {
       expect(theHeader.querySelector('.title').innerText).to.equal('thomas shouler');
     });
 
-    it('contains a hand drawn line', () => {
-      expect(theHeader.querySelector('.single-line')).to.exist;
+    it('contains hand drawn lines', () => {
+      expect(theHeader.querySelector('.double-line')).to.exist;
     });
   });
 

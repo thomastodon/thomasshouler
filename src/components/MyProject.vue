@@ -1,15 +1,17 @@
 <template>
   <div class="my-project">
-    <the-header :title="id"></the-header>
-    <br>
+    <the-header :title="id"/>
     <div class="description">{{description}}</div>
-    <the-footer></the-footer>
+    <single-line/>
+    <div class="images"></div>
+    <the-footer/>
   </div>
 </template>
 
 <script>
   import TheHeader from './TheHeader';
   import TheFooter from './TheFooter';
+  import SingleLine from "./SingleLine";
 
   export default {
     name: 'my-project',
@@ -17,6 +19,7 @@
       id: String
     },
     components: {
+      singleLine: SingleLine,
       theHeader: TheHeader,
       theFooter: TheFooter,
     },
@@ -43,6 +46,10 @@
 
   div.description {
     position: relative;
+    font-weight: 300;
+  }
+
+  div.images {
     flex: 1;
   }
 </style>

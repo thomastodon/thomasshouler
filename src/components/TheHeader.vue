@@ -4,7 +4,7 @@
       <span class="title">{{title}}</span>
       <a class="link" href="https://thomasshouler.io">https://thomasshouler.io</a>
     </div>
-    <double-line></double-line>
+    <double-line/>
   </div>
 </template>
 

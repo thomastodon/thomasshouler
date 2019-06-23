@@ -1,6 +1,6 @@
 <template>
   <div class="my-projects">
-    <the-header title="thomas shouler"></the-header>
+    <the-header title="thomas shouler"/>
     <div class="my-project-listings">
       <project-listing
         v-for="project in projects"
@@ -8,10 +8,9 @@
         :id="project.id"
         :top="project.top"
         :left="project.left"
-        :width="project.width">
-      </project-listing>
+        :width="project.width"/>
     </div>
-    <the-footer></the-footer>
+    <the-footer/>
   </div>
 </template>
 
