@@ -18,13 +18,10 @@ export default new Vuex.Store({
     setImage(state, image) {
       Vue.set(state.images, image.id, image);
     },
-    addImageToProject(state, {id, projectId}) {
+    addImageToProject(state, {id, projectId, order}) {
       if (state.projects[projectId].images === undefined) Vue.set(state.projects[projectId], 'images', []);
 
-      const imageAlreadyExists = state.projects[projectId].images.includes(id);
-      if (imageAlreadyExists) return;
-
-      Vue.set(state.projects[projectId].images, state.projects[projectId].images.length, id);
+      Vue.set(state.projects[projectId].images, order, id);
     },
   },
   actions: {
@@ -38,7 +35,7 @@ export default new Vuex.Store({
           image.then(image => {
             commit('setImage', image);
             commit('addImageToProject', image);
-          })
+          });
         }));
     },
   },
@@ -55,6 +52,6 @@ export default new Vuex.Store({
       if (images === undefined) return [];
 
       return images.map(imageId => state.images[imageId]);
-    }
+    },
   },
 })
