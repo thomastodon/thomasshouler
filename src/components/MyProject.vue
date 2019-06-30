@@ -10,7 +10,7 @@
       :rowHeightRem="8"
       v-on:thumbnail-clicked="openLightBox"/>
     <the-footer/>
-    <div class="light-box" v-on:click="closeLightBox"><img></div>
+    <light-box :image-source="lightBoxImageSource" :open="lightBoxOpen"/>
   </div>
 </template>
 
@@ -19,17 +19,25 @@
   import SingleLine from "./SingleLine";
   import ProjectImages from "./ProjectImages";
   import TheFooter from './TheFooter';
+  import LightBox from "./LightBox";
 
   export default {
     name: 'my-project',
     props: {
       id: String,
     },
+    data() {
+      return {
+        lightBoxImageSource: "",
+        lightBoxOpen: false,
+      }
+    },
     components: {
       theHeader: TheHeader,
       singleLine: SingleLine,
       projectImages: ProjectImages,
       theFooter: TheFooter,
+      lightBox: LightBox,
     },
     computed: {
       project() {
@@ -41,21 +49,14 @@
     },
     methods: {
       openLightBox($event) {
-        this.$el.querySelector('.light-box').style.setProperty('display', 'flex');
-        this.$el.querySelector('.light-box').querySelector('img').src = $event.url
-      },
-      closeLightBox($event) {
-        const elementClicked = $event.target.tagName.toLowerCase();
-        if (elementClicked === 'img') return;
-        this.$el.querySelector('.light-box').style.setProperty('display', 'none');
+        this.lightBoxImageSource = $event.url;
+        this.lightBoxOpen = true;
       },
     },
   }
 </script>
 
 <style scoped lang="scss">
-
-  @import '../main';
 
   div.my-project {
     position: absolute;
@@ -78,26 +79,5 @@
   .project-images {
     flex: 1;
     overflow: auto;
-  }
-
-  .light-box {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: space-evenly;
-  }
-
-  .light-box > img {
-    max-width: 80%;
-    max-height: 80%;
-    align-self: center;
-    background-color: $light-gray;
-    padding: 0.8rem;
-    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
   }
 </style>
