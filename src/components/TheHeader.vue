@@ -21,6 +21,7 @@
 </script>
 
 <style scoped lang="scss">
+
   @import '../main';
 
   div.the-header {

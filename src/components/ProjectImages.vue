@@ -55,14 +55,11 @@
 <style scoped lang="scss">
 
   div.project-images {
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
-
     position: relative;
-
     @for $i from 1 through 36 {
       div:nth-child(#{$i}) {
         $width: (random(8) + 8) + rem;

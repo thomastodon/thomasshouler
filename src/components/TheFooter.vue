@@ -27,5 +27,4 @@
   div.the-footer {
     height: 3.5rem;
   }
-
 </style>

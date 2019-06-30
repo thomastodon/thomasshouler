@@ -21,17 +21,14 @@
 <style scoped lang="scss">
 
   div {
-
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
-
     max-width: 20rem;
     overflow: hidden;
   }
 
   img {
-
     width: 100%;
     height: 100%;
     vertical-align: middle;
