@@ -7,9 +7,10 @@ import MyProject from "./components/MyProject";
 Vue.use(VueRouter);
 
 export default new VueRouter({
+  mode: 'history',
   routes: [
     {path: '/', component: MyProjects},
+    {path: '/project/:id', component: MyProject, props: true},
     {path: '/cv', component: MyResume},
-    {path: '/project/:id', component: MyProject, props: true}
   ]
 });
