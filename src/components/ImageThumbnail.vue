@@ -1,5 +1,5 @@
 <template>
-  <div class="image-thumbnail">
+  <div class="image-thumbnail" v-on:click="thumbnailClicked">
     <img v-bind:src="this.url">
   </div>
 </template>
@@ -9,6 +9,11 @@
     name: 'image-thumbnail',
     props: {
       url: String,
+    },
+    methods: {
+      thumbnailClicked() {
+        this.$emit('thumbnail-clicked', {url: this.url})
+      },
     },
   }
 </script>

@@ -1,6 +1,7 @@
 <template>
   <div class="project-images" v-bind:style="style">
     <image-thumbnail
+      v-on:thumbnail-clicked="thumbnailClicked"
       v-bind:style="thumbnailStyle"
       v-for="image in images"
       :key="image.id"
@@ -37,6 +38,11 @@
           'margin': `0 ${this.gutterRem}rem ${this.gutterRem}rem 0`,
           'height': `${this.rowHeightRem}rem`,
         }
+      },
+    },
+    methods:{
+      thumbnailClicked($event) {
+        this.$emit('thumbnail-clicked', $event)
       },
     },
     created() {
