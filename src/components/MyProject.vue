@@ -50,6 +50,12 @@
 <style lang="scss">
 
   div.my-project {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
 
@@ -64,11 +70,13 @@
   }
 
   div.images {
+    flex: 1;
+    overflow: auto;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
-    flex: 1;
 
     margin-left: -0.5rem;
     left: 0.5rem;
