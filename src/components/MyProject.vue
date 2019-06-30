@@ -10,7 +10,10 @@
       :rowHeightRem="8"
       v-on:thumbnail-clicked="openLightBox"/>
     <the-footer/>
-    <light-box :image-source="lightBoxImageSource" :open="lightBoxOpen"/>
+    <light-box
+      :image-source="lightBoxImageSource"
+      :open="lightBoxOpen"
+      v-on:exit="closeLightBox"/>
   </div>
 </template>
 
@@ -51,6 +54,9 @@
       openLightBox($event) {
         this.lightBoxImageSource = $event.url;
         this.lightBoxOpen = true;
+      },
+      closeLightBox() {
+        this.lightBoxOpen = false;
       },
     },
   }

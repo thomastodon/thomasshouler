@@ -1,5 +1,5 @@
 <template>
-  <div class="light-box" v-on:click="closeLightBox">
+  <div class="light-box" v-on:click="onClick">
     <img>
   </div>
 </template>
@@ -16,21 +16,28 @@
       },
     },
     methods: {
-      closeLightBox($event) {
-        const elementClicked = $event.target.tagName.toLowerCase();
+      onClick(event) {
+        const elementClicked = event.target.tagName.toLowerCase();
         if (elementClicked === 'img') return;
-        this.$el.style.setProperty('display', 'none');
-        this.open = false;
+        this.$emit('exit')
+      },
+      onKeyUp(event) {
+        if (event.key === 'Escape') this.$emit('exit');
       },
     },
     watch: {
       open: function (open) {
         if (open) {
           this.$el.style.setProperty('display', 'flex');
-          this.$el.querySelector('img').src = this.imageSource
+          this.$el.querySelector('img').src = this.imageSource;
+        } else {
+          this.$el.style.setProperty('display', 'none');
         }
-      }
-    }
+      },
+    },
+    created() {
+      window.addEventListener('keyup', this.onKeyUp)
+    },
   }
 </script>
 
