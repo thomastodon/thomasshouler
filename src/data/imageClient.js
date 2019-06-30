@@ -7,6 +7,7 @@ export const getImages = (projectId) => firebase
   .listAll()
   .then(async result => {
     return await result.items.map(async item => {
+      if (item.name === 'id.png') return;
       const image = {projectId: projectId};
       await item.getMetadata().then(metadata => image['id'] = metadata.generation);
       await item.getDownloadURL().then(url => image['url'] = url);
