@@ -1,7 +1,9 @@
 <template>
-  <a :href="url" class="social-icon" :id="image">
-    <img v-bind:src="'./../assets/' + image + '.png'">
-  </a>
+  <div class="social-icon">
+    <a :href="url" :id="image">
+      <img v-bind:src="'./../assets/' + image + '.png'">
+    </a>
+  </div>
 </template>
 
 <script>
@@ -22,13 +24,25 @@
 
 <style scoped lang="scss">
 
-  a.social-icon > img {
-    height: 1.5rem;
-    opacity: 0.3;
-    margin: 0.2rem;
+  div {
+    height: 1.6rem;
+    width: 1.6rem;
+    margin: 0.7rem 0.7rem 0.7rem 0;
   }
 
-  a.social-icon > img:hover {
+  a {
+    position: relative;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  a > img {
+    height: 100%;
+    opacity: 0.3;
+  }
+
+  a > img:hover {
     opacity: 0.6;
     transition-duration: 0.3s;
   }

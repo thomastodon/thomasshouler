@@ -80,9 +80,11 @@
   div.description {
     position: relative;
     font-weight: 300;
+    margin: 0.8rem 0;
   }
 
   .project-images {
+    margin: 0.2rem 0;
     flex: 1;
     overflow: auto;
   }

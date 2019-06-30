@@ -15,11 +15,13 @@
 <style scoped lang="scss">
 
   div.single-line {
-    margin: 0;
+    height: 0.05rem;
   }
 
   img.single-line {
+    position: relative;
+    height: 100%;
     width: 100%;
-    height: 1px;
+    top: -0.9rem;
   }
 </style>

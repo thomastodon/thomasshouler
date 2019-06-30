@@ -26,13 +26,14 @@
 
   div.the-header {
     margin: 2rem 0 0 0;
-    height: 2.75rem;
+    height: auto;
   }
 
   div.the-header > .text {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 0.1rem;
   }
 
   span.title {
@@ -40,11 +41,6 @@
     font-size: 1.4rem;
     font-weight: 700;
     color: $dark-gray;
-  }
-
-  div.double-line {
-    position: relative;
-    top: -0.5rem;
   }
 
   a.link {

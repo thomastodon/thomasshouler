@@ -15,11 +15,13 @@
 <style scoped lang="scss">
 
   div.double-line {
-    margin: 0;
+    height: 0.25rem;
   }
 
   img.double-line {
+    position: relative;
+    top: -0.66rem;
     width: 100%;
-    height: 0.25rem;
+    height: 100%;
   }
 </style>

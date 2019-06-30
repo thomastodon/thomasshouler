@@ -40,7 +40,7 @@
         }
       },
     },
-    methods:{
+    methods: {
       thumbnailClicked($event) {
         this.$emit('thumbnail-clicked', $event)
       },
