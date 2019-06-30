@@ -3,7 +3,7 @@
     <the-header :title="id"/>
     <div class="description">{{description}}</div>
     <single-line/>
-    <project-images class="project-images" :projectId="id" gutterRem="0.5" rowHeightRem="8"/>
+    <project-images class="project-images" :projectId="id" :gutterRem="0.5" :rowHeightRem="8"/>
     <the-footer/>
   </div>
 </template>

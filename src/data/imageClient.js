@@ -6,11 +6,12 @@ export const getImages = (projectId) => firebase
   .ref('my-projects/' + projectId)
   .listAll()
   .then(async result => {
-    return await result.items.map(async item => {
-      if (item.name === 'id.png') return;
-      const image = {projectId: projectId};
-      await item.getMetadata().then(metadata => image['id'] = metadata.generation);
-      await item.getDownloadURL().then(url => image['url'] = url);
-      return image;
-    });
+    return await result.items
+      .filter(item => item.name !== 'id.png')
+      .map(async item => {
+        const image = {projectId: projectId};
+        await item.getMetadata().then(metadata => image['id'] = metadata.generation);
+        await item.getDownloadURL().then(url => image['url'] = url);
+        return image;
+      });
   });
