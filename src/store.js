@@ -1,27 +1,60 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import {getProjects} from "./data/projectClient";
+import {getImages} from "./data/imageClient";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   strict: true,
   state: {
-    projects: []
+    projects: {},
+    images: {},
   },
   mutations: {
-    setProjects(state, projects) {
-      state.projects = projects;
-    }
+    setProject(state, project) {
+      Vue.set(state.projects, project.id, project);
+    },
+    setImage(state, image) {
+      Vue.set(state.images, image.id, image);
+    },
+    addImageToProject(state, {id, projectId}) {
+      if (state.projects[projectId].images === undefined) Vue.set(state.projects[projectId], 'images', []);
+
+      const imageAlreadyExists = state.projects[projectId].images.includes(id);
+      if (imageAlreadyExists) return;
+
+      Vue.set(state.projects[projectId].images, state.projects[projectId].images.length, id);
+    },
   },
   actions: {
     getProjects({commit}) {
-      commit('setProjects', getProjects());
-    }
+      getProjects()
+        .forEach(project => commit('setProject', project));
+    },
+    getImages({commit}, projectId) {
+      getImages(projectId)
+        .then(images => images.forEach(image => {
+          image.then(image => {
+            commit('setImage', image);
+            commit('addImageToProject', image);
+          })
+        }));
+    },
   },
   getters: {
     findProjectById: (state) => (id) => {
-      return state.projects.find(project => project.id === id);
+      return state.projects[id];
+    },
+    getImagesByProjectId: (state) => (id) => {
+
+      const project = state.projects[id];
+      if (project === undefined) return [];
+
+      const images = project.images;
+      if (images === undefined) return [];
+
+      return images.map(imageId => state.images[imageId]);
     }
-  }
+  },
 })

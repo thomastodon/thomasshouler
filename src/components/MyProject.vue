@@ -3,7 +3,12 @@
     <the-header :title="id"/>
     <div class="description">{{description}}</div>
     <single-line/>
-    <div class="images"></div>
+    <div class="images">
+      <image-thumbnail
+        v-for="image in images"
+        :key="image.id"
+        :url="image.url"/>
+    </div>
     <the-footer/>
   </div>
 </template>
@@ -12,16 +17,18 @@
   import TheHeader from './TheHeader';
   import TheFooter from './TheFooter';
   import SingleLine from "./SingleLine";
+  import ImageThumbnail from "./ImageThumbnail";
 
   export default {
     name: 'my-project',
     props: {
-      id: String
+      id: String,
     },
     components: {
       singleLine: SingleLine,
       theHeader: TheHeader,
       theFooter: TheFooter,
+      imageThumbnail: ImageThumbnail,
     },
     computed: {
       project() {
@@ -29,7 +36,13 @@
       },
       description() {
         return this.project ? this.project.description : ""
+      },
+      images() {
+        return this.$store.getters.getImagesByProjectId(this.id);
       }
+    },
+    created() {
+      this.$store.dispatch('getImages', this.id);
     }
   }
 </script>
@@ -37,11 +50,12 @@
 <style lang="scss">
 
   div.my-project {
+    display: flex;
+    flex-direction: column;
+
     margin: 0 4rem 0 4rem;
     max-width: 50rem;
-    display: flex;
     min-height: 100vh;
-    flex-direction: column;
   }
 
   div.description {
@@ -50,6 +64,32 @@
   }
 
   div.images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
     flex: 1;
+
+    margin-left: -0.5rem;
+    left: 0.5rem;
+    position: relative;
+
+    @for $i from 1 through 36 {
+      div:nth-child(#{$i}) {
+        $h: (random(8) + 8) + rem;
+        width: $h;
+      }
+    }
+  }
+
+  div.image-thumbnail {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+
+    max-width: 20rem;
+    height: 8rem;
+    margin: 0 0.5rem 0.5rem 0;
+    overflow: hidden;
   }
 </style>

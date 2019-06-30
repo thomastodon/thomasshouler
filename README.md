@@ -36,3 +36,7 @@ __pull__ remote content down to local:
 ```
 gsutil -m rsync -d -r gs://thomasshouler-id.appspot.com storage/.
 ```
+update storage rules:
+```
+firebase deploy --only storage
+```
