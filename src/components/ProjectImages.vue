@@ -16,8 +16,8 @@
     name: 'project-images',
     props: {
       projectId: String,
-      gutter: String,
-      rowHeight: String,
+      gutterRem: Number,
+      rowHeightRem: Number,
     },
     components: {
       imageThumbnail: ImageThumbnail,
@@ -28,16 +28,16 @@
       },
       style() {
         return {
-          'margin-left': -1 * this.gutter,
-          'left': this.gutter,
+          'margin-left': `${-1 * this.gutterRem}rem`,
+          'left': `${this.gutterRem}rem`,
         }
       },
       thumbnailStyle() {
         return {
-          'margin': `0 ${this.gutter} ${this.gutter} 0`,
-          'height': this.rowHeight,
+          'margin': `0 ${this.gutterRem}rem ${this.gutterRem}rem 0`,
+          'height': `${this.rowHeightRem}rem`,
         }
-      }
+      },
     },
     created() {
       this.$store.dispatch('getImages', this.projectId);
@@ -46,7 +46,7 @@
 
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 
   div.project-images {
 
@@ -63,15 +63,5 @@
         width: $width;
       }
     }
-  }
-
-  div.image-thumbnail {
-
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: auto;
-
-    max-width: 20rem;
-    overflow: hidden;
   }
 </style>

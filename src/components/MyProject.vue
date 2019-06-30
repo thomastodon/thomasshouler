@@ -3,7 +3,7 @@
     <the-header :title="id"/>
     <div class="description">{{description}}</div>
     <single-line/>
-    <project-images :projectId="id" gutter="0.5rem" rowHeight="8rem"/>
+    <project-images class="project-images" :projectId="id" gutterRem="0.5" rowHeightRem="8"/>
     <the-footer/>
   </div>
 </template>
@@ -36,7 +36,7 @@
   }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 
   div.my-project {
 
@@ -59,7 +59,7 @@
     font-weight: 300;
   }
 
-  div.project-images {
+  .project-images {
 
     flex: 1;
     overflow: auto;

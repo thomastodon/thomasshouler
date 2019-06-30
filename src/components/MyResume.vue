@@ -22,7 +22,7 @@
   }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 
   embed {
     min-height: 100vh;
@@ -32,5 +32,4 @@
   .my-resume {
     background-color: rgb(82, 86, 89);
   }
-
 </style>

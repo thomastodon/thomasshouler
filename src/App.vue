@@ -18,6 +18,7 @@
   @import 'main';
 
   body {
+    overflow: hidden;
     background-color: $light-gray;
     margin: 0;
     font-family: 'Roboto', sans-serif;

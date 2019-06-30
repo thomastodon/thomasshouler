@@ -34,7 +34,7 @@
   }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 
   div.my-projects {
     margin: 0 4rem 0 4rem;
