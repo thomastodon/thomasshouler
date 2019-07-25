@@ -10,7 +10,7 @@ export const getImages = (projectId) => firebase
       .filter(item => item.name !== 'id.png')
       .map(async item => {
         const image = {projectId: projectId};
-        image['order'] = parseInt(item.name.replace('.png', '')) - 1;
+        image['order'] = parseInt(item.name.replace('.png', ''));
         await item.getMetadata().then(metadata => image['id'] = metadata.generation);
         await item.getDownloadURL().then(url => image['url'] = url);
         return image;
