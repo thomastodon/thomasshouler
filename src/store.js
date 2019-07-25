@@ -51,7 +51,9 @@ export default new Vuex.Store({
       const images = project.images;
       if (images === undefined) return [];
 
-      return images.map(imageId => state.images[imageId]);
+      return images
+        .filter(imageId => imageId !== undefined)
+        .map(imageId => state.images[imageId]);
     },
   },
 })
