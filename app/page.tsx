@@ -9,10 +9,10 @@ const paragraphStyle = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#eeeeee', paddingTop: '2rem', paddingBottom: '2rem', paddingLeft: '4rem', paddingRight: '4rem' }}>
+    <div className="min-h-screen flex flex-col px-4 md:px-16 py-4 md:py-8" style={{ backgroundColor: '#eeeeee' }}>
       <Header />
       
-      <main className="flex-1 flex flex-col" style={{ paddingTop: '0.25rem', paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '0.25rem' }}>
+      <main className="flex-1 flex flex-col p-2 md:p-4 py-1 md:py-1">
         <div style={{ maxWidth: '800px', margin: '0 auto', width: '100%', display: 'flex', flexDirection: 'column', flex: 1 }}>
           <div>
             <p style={paragraphStyle}>
@@ -22,7 +22,7 @@ export default function Home() {
               I have a formal background in civil and structural engineering: studying in school for five years with a focus on architecture, followed by four years of professional practice. While practicing, I became increasingly interested in the role technology was playing in developing our physical environment, and began to spend more and more of my time trying to improve the tools we relied on to execute our work as design engineers.
             </p>
             <p style={{ ...paragraphStyle, marginTop: '1rem' }}>
-              After these years teaching myself what I could, learning how to build and ship software, I chose to make a change and focus on this exclusively. Since then, I've worked in a breadth of spaces, helping the government [and some enterprise] solve some of their most mission critical problems with software. More recently, I've brought my focus back to how I can apply my background to the benefit of how we construct and operate within our built world.
+              After these years teaching myself what I could, learning how to build and ship software, I made a change and focused on this exclusively. Since then, I've worked in a breadth of spaces, helping the government [and some enterprise] solve some of their most mission critical problems with software. More recently, I've brought my focus back to how I can apply my background to the benefit of how we construct and operate our built world.
             </p>
             <p style={{ ...paragraphStyle, marginTop: '1rem' }}>
               I live and work in New York City. Contact me at{' '}
