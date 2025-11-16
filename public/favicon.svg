@@ -1,0 +1,24 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Base -->
+  <rect x="18" y="58" width="28" height="4" fill="#8B9DAF" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- Column shaft -->
+  <path d="M 22 16 L 20 58 L 44 58 L 42 16 Z" fill="#A8B8C8" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- Fluting lines on shaft -->
+  <line x1="26" y1="16" x2="24.5" y2="58" stroke="#6B7C8F" stroke-width="1"/>
+  <line x1="30" y1="16" x2="29" y2="58" stroke="#6B7C8F" stroke-width="1"/>
+  <line x1="34" y1="16" x2="35" y2="58" stroke="#6B7C8F" stroke-width="1"/>
+  <line x1="38" y1="16" x2="39.5" y2="58" stroke="#6B7C8F" stroke-width="1"/>
+  
+  <!-- Capital base -->
+  <rect x="16" y="12" width="32" height="4" fill="#8B9DAF" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- Greek key meander pattern -->
+  <rect x="14" y="6" width="36" height="6" fill="#7B8D9F" stroke="#333" stroke-width="1.5"/>
+  <path d="M 16 7 L 20 7 L 20 11 M 22 7 L 26 7 L 26 11 M 28 11 L 32 11 L 32 7 M 34 11 L 38 11 L 38 7 M 40 7 L 44 7 L 44 11 M 46 7 L 48 7" 
+        stroke="#A8B8C8" stroke-width="1.5" fill="none"/>
+  
+  <!-- Abacus (top slab) -->
+  <rect x="12" y="2" width="40" height="4" fill="#8B9DAF" stroke="#333" stroke-width="1.5"/>
+</svg>
