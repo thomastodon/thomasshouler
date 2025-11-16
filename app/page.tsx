@@ -25,7 +25,7 @@ export default function Home() {
               After these years teaching myself what I could, learning how to build and ship software, I chose to make a change and focus on this exclusively. Since then, I've worked in a breadth of spaces, helping the government [and some enterprise] solve some of their most mission critical problems with software. More recently, I've brought my focus back to how I can apply my background to the benefit of how we construct and operate within our built world.
             </p>
             <p style={{ ...paragraphStyle, marginTop: '1rem' }}>
-              I live and work in New York City. You can contact me via{' '}
+              I live and work in New York City. Contact me at{' '}
               <a href="mailto:thomasshouler@gmail.com" style={{ color: '#424242', textDecoration: 'underline' }}>
                 thomasshouler@gmail.com
               </a>.
