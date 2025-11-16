@@ -12,7 +12,7 @@ export default function Home() {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#eeeeee', paddingTop: '2rem', paddingBottom: '2rem', paddingLeft: '4rem', paddingRight: '4rem' }}>
       <Header />
       
-      <main className="flex-1 flex flex-col" style={{ paddingTop: '0.25rem', paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '1rem' }}>
+      <main className="flex-1 flex flex-col" style={{ paddingTop: '0.25rem', paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '0.25rem' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', width: '100%', display: 'flex', flexDirection: 'column', flex: 1 }}>
           <div>
             <p style={paragraphStyle}>
