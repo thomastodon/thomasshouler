@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="w-full p-2 md:p-4">
+    <header className="w-full p-2 md:p-4" style={{ paddingTop: '0rem', paddingBottom: '0rem' }}>
       <nav style={{ maxWidth: '800px', margin: '0 auto', width: '100%' }}>
         <p style={{ 
           fontFamily: 'var(--font-roboto), sans-serif',

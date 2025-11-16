@@ -9,10 +9,10 @@ const paragraphStyle = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col px-4 md:px-16 py-4 md:py-8" style={{ backgroundColor: '#eeeeee' }}>
+    <div className="h-screen flex flex-col px-4 md:px-16 py-4 md:py-8" style={{ backgroundColor: '#eeeeee' }}>
       <Header />
       
-      <main className="flex-1 flex flex-col p-2 md:p-4 py-1 md:py-1">
+      <main className="flex-1 flex flex-col p-2 md:p-4 py-1 md:py-1 overflow-y-auto">
         <div style={{ maxWidth: '800px', margin: '0 auto', width: '100%', display: 'flex', flexDirection: 'column', flex: 1 }}>
           <div>
             <p style={paragraphStyle}>
