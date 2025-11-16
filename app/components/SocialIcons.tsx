@@ -8,7 +8,7 @@ const SOCIAL_LINKS = [
 
 export default function SocialIcons() {
   return (
-    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+    <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', marginTop: '0.5rem' }}>
       {SOCIAL_LINKS.map(({ icon, url }) => (
         <a
           key={icon}
