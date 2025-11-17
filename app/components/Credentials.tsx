@@ -14,7 +14,7 @@ const credentialStyle = {
 
 export default function Credentials() {
   return (
-    <div style={{ marginTop: 'auto', paddingTop: '2rem' }}>
+    <div style={{ marginTop: 'auto', paddingTop: '2rem', paddingBottom: '1rem' }}>
       {CREDENTIALS.map((credential, index) => (
         <p key={index} style={credentialStyle}>
           {credential}
