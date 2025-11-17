@@ -9,7 +9,7 @@ const paragraphStyle = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col px-4 md:px-16 py-4 md:py-8" style={{ backgroundColor: '#eeeeee', maxHeight: '100dvh' }}>
+    <div className="h-screen max-h-screen flex flex-col px-4 md:px-16 py-4 md:py-8" style={{ backgroundColor: '#eeeeee' }}>
       <Header />
       
       <main className="flex-1 flex flex-col p-2 md:p-4 py-1 md:py-1 overflow-y-auto">
