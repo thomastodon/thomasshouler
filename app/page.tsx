@@ -19,7 +19,7 @@ export default function Home() {
               Hi, I'm Tom and I work with technology in our built environment.
             </p>
             <p style={{ ...paragraphStyle, marginTop: '1rem' }}>
-              I have a formal background in civil and structural engineering: studying in school for five years with a focus on architecture, followed by four years of professional practice. While practicing, I became increasingly interested in the role technology was playing in developing our physical environment, and began to spend more and more of my time trying to improve the tools we had leveraged as design engineers.
+              I have a formal background in civil and structural engineering: studying in school for five years with a focus on architecture, followed by four years of professional practice. While practicing, I became increasingly interested in the role technology was playing in developing our physical environment, and began to spend more and more of my time trying to improve the tools we relied on as design engineers.
             </p>
             <p style={{ ...paragraphStyle, marginTop: '1rem' }}>
               After teaching myself what I could, learning how to build and ship software, I decided to step back from the building industry to focus on this exclusively. Since then, I've worked in a breadth of different spaces, helping our government [and some enterprise] solve some of their most mission critical problems with software. With this experience, I've brought my focus back to how we can better construct and operate our built world with technology.
