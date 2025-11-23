@@ -16,7 +16,7 @@ export default function Home() {
         <div style={{ maxWidth: '800px', margin: '0 auto', width: '100%', display: 'flex', flexDirection: 'column', flex: 1, paddingTop: '1rem' }}>
           <div>
             <p style={paragraphStyle}>
-              I'm Tom, and I have a deep interest in how we construct and operate our built world with technology. I'm currently working on a project to help us better construct and operate our built world with technology.  
+              I'm Tom, and I have a deep interest in how we construct and operate our built world with technology.
             </p>
             <p style={{ ...paragraphStyle, marginTop: '1rem' }}>
               For the past ten years, I’ve worked in a breadth of different spaces, helping our government [and some enterprise] solve some of their most mission critical problems with software. Often building from zero to one, but also scaling more mature products and teams.
