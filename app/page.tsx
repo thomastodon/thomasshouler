@@ -19,7 +19,7 @@ export default function Home() {
               I'm Tom, and I have a deep interest in how we construct and operate our built world with technology.
             </p>
             <p style={{ ...paragraphStyle, marginTop: '1rem' }}>
-              For the past ten years, I’ve worked with government agencies and commercial enterprises to solve their most mission critical problems with software. Often building from zero to one, but also scaling more mature products and teams.
+              For the past ten years, I’ve worked with government agencies and businesses to solve some of their most mission critical problems with software. Often building from zero to one, but also scaling more mature products and teams.
             </p>
             <p style={{ ...paragraphStyle, marginTop: '1rem' }}>
               I have a formal background in structural engineering: studying in school for five years with a focus on architecture, followed by four years of professional practice. While practicing, I became increasingly interested in the role technology was playing in developing our physical environment, and began to spend more and more of my time trying to improve the tools we relied on as design engineers. My initial development background is self-taught.
