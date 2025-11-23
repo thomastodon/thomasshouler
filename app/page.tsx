@@ -22,7 +22,7 @@ export default function Home() {
               For the past ten years, I’ve worked with government agencies and businesses to solve some of their most mission critical problems with software. Often building from zero to one, but also scaling more mature products and teams.
             </p>
             <p style={{ ...paragraphStyle, marginTop: '1rem' }}>
-              I have a formal background in structural engineering: studying in school for five years with a focus on architecture, followed by four years of professional practice. While practicing, I became increasingly interested in technology's role in shaping our physical environment, before shifting my focus entirely to what could be made possible with software. My initial development background is self-taught.
+              I have a formal background in structural engineering: studying in school for five years with a focus on architecture, followed by four years of professional practice. While practicing, I became increasingly interested in technology's role in shaping our physical environment, before I shifted my focus entirely to what could be made possible with software. My initial software development background is self-taught.
             </p>
             <p style={{ ...paragraphStyle, marginTop: '1rem' }}>
               I live and work in New York City. Contact me at{' '}
