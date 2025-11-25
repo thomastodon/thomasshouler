@@ -26,7 +26,7 @@ export default function Home() {
             </p>
             <p style={{ ...paragraphStyle, marginTop: '1rem' }}>
               I live and work in New York City. Contact me at{' '}
-              <a href="mailto:thomasshouler@gmail.com" style={{ color: '#424242', textDecoration: 'underline' }}>
+              <a href="mailto:tom@thomasshouler.com" style={{ color: '#424242', textDecoration: 'underline' }}>
                 thomasshouler@gmail.com
               </a>.
             </p>
